@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositorio de Estudio - Desarrollo Web</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+        
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .card-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .card-title {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .card-description {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .card-tags {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .tag {
+            background: #f0f0f0;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            color: #555;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Repositorio de Estudio</h1>
+            <p>Desarrollo Web - HTML y CSS</p>
+            <p style="font-size: 0.9em; margin-top: 10px; opacity: 0.8;">
+                Aprende HTML y CSS de forma práctica con ejemplos funcionales
+            </p>
+        </header>
+        
+        <div class="grid">
+            <a href="00-introduccion/index.html" class="card">
+                <div class="card-number">00</div>
+                <div class="card-title">Introducción</div>
+                <div class="card-description">
+                    Fundamentos y conceptos básicos de la web, HTML y CSS. Todo lo que necesitas saber para empezar.
+                </div>
+                <div class="card-tags">
+                    <span class="tag">Web</span>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">Básico</span>
+                </div>
+            </a>
+            
+            <a href="01-html-basico/index.html" class="card">
+                <div class="card-number">01</div>
+                <div class="card-title">HTML Básico</div>
+                <div class="card-description">
+                    Estructura de etiquetas, párrafos, encabezados, listas, enlaces, imágenes y formularios.
+                </div>
+                <div class="card-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">Estructura</span>
+                    <span class="tag">Formularios</span>
+                </div>
+            </a>
+            
+            <a href="02-css-basico/index.html" class="card">
+                <div class="card-number">02</div>
+                <div class="card-title">CSS Básico</div>
+                <div class="card-description">
+                    Selectores, propiedades, colores, unidades, modelo de caja, bordes, fondos y gradientes.
+                </div>
+                <div class="card-tags">
+                    <span class="tag">CSS</span>
+                    <span class="tag">Estilos</span>
+                    <span class="tag">Diseño</span>
+                </div>
+            </a>
+            
+            <a href="03-html-avanzado/index.html" class="card">
+                <div class="card-number">03</div>
+                <div class="card-title">HTML Avanzado</div>
+                <div class="card-description">
+                    Metatags, tablas, audio, video, HTML semántico, accesibilidad y mejores prácticas.
+                </div>
+                <div class="card-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">Semántico</span>
+                    <span class="tag">Accesibilidad</span>
+                </div>
+            </a>
+            
+            <a href="04-css-intermedio/index.html" class="card">
+                <div class="card-number">04</div>
+                <div class="card-title">CSS Intermedio</div>
+                <div class="card-description">
+                    Selectores avanzados, pseudoclases, posicionamiento, transiciones y metodología BEM.
+                </div>
+                <div class="card-tags">
+                    <span class="tag">CSS</span>
+                    <span class="tag">Avanzado</span>
+                    <span class="tag">Layout</span>
+                </div>
+            </a>
+            
+            <a href="05-css-flexbox/index.html" class="card">
+                <div class="card-number">05</div>
+                <div class="card-title">CSS Flexbox</div>
+                <div class="card-description">
+                    Sistema de diseño unidimensional para crear layouts flexibles y responsivos.
+                </div>
+                <div class="card-tags">
+                    <span class="tag">Flexbox</span>
+                    <span class="tag">Layout</span>
+                    <span class="tag">Responsive</span>
+                </div>
+            </a>
+            
+            <a href="06-responsive-design/index.html" class="card">
+                <div class="card-number">06</div>
+                <div class="card-title">Responsive Design</div>
+                <div class="card-description">
+                    Media queries, mobile first, imágenes responsive y container queries.
+                </div>
+                <div class="card-tags">
+                    <span class="tag">Responsive</span>
+                    <span class="tag">Mobile</span>
+                    <span class="tag">Media Queries</span>
+                </div>
+            </a>
+            
+            <a href="07-css-grid/index.html" class="card">
+                <div class="card-number">07</div>
+                <div class="card-title">CSS Grid</div>
+                <div class="card-description">
+                    Sistema de diseño bidimensional para crear layouts complejos con filas y columnas.
+                </div>
+                <div class="card-tags">
+                    <span class="tag">Grid</span>
+                    <span class="tag">Layout</span>
+                    <span class="tag">2D</span>
+                </div>
+            </a>
+            
+            <a href="08-animaciones/index.html" class="card">
+                <div class="card-number">08</div>
+                <div class="card-title">Animaciones</div>
+                <div class="card-description">
+                    Transiciones, animaciones con @keyframes, efectos y mejores prácticas.
+                </div>
+                <div class="card-tags">
+                    <span class="tag">Animaciones</span>
+                    <span class="tag">Transiciones</span>
+                    <span class="tag">Efectos</span>
+                </div>
+            </a>
+            
+            <a href="09-web-hosting/index.html" class="card">
+                <div class="card-number">09</div>
+                <div class="card-title">Web Hosting</div>
+                <div class="card-description">
+                    Cómo publicar tu sitio web en internet usando servicios gratuitos como GitHub Pages.
+                </div>
+                <div class="card-tags">
+                    <span class="tag">Hosting</span>
+                    <span class="tag">GitHub Pages</span>
+                    <span class="tag">Deploy</span>
+                </div>
+            </a>
+            
+            <a href="10-css-avanzado/index.html" class="card">
+                <div class="card-number">10</div>
+                <div class="card-title">CSS Avanzado</div>
+                <div class="card-description">
+                    Variables CSS, transform, filter, funciones modernas y características avanzadas.
+                </div>
+                <div class="card-tags">
+                    <span class="tag">CSS</span>
+                    <span class="tag">Avanzado</span>
+                    <span class="tag">Moderno</span>
+                </div>
+            </a>
+            
+            <a href="11-proyectos-finales/index.html" class="card">
+                <div class="card-number">11</div>
+                <div class="card-title">Proyectos Finales</div>
+                <div class="card-description">
+                    Proyectos completos: sidebar menu, chatbox, flip card, one-page view y menú acordeón.
+                </div>
+                <div class="card-tags">
+                    <span class="tag">Proyectos</span>
+                    <span class="tag">Práctica</span>
+                    <span class="tag">Completo</span>
+                </div>
+            </a>
+        </div>
+        
+        <footer>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">12</span>
+                    <span class="stat-label">Secciones</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Ejemplos</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">HTML/CSS</span>
+                    <span class="stat-label">Puro</span>
+                </div>
+            </div>
+            <p style="margin-top: 30px; opacity: 0.8;">
+                Repositorio de estudio práctico - Desarrollo Web
+            </p>
+            <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.7;">
+                Autor: Fravelz
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
+

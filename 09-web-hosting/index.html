@@ -38,6 +38,45 @@
     </style>
 </head>
 <body>
+        <nav style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; margin: -20px -20px 30px -20px; border-radius: 0 0 10px 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000;">
+        <style>
+            .nav-link {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                display: inline-block;
+                padding: 8px 15px;
+                background: rgba(255,255,255,0.2);
+                border-radius: 5px;
+                transition: all 0.3s ease;
+            }
+            .nav-link:hover {
+                background: rgba(255,255,255,0.3);
+                transform: translateY(-2px);
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            }
+            .nav-disabled {
+                opacity: 0.5;
+                padding: 8px 15px;
+                display: inline-block;
+                cursor: not-allowed;
+            }
+        </style>
+        <div style="max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+            <div style="flex: 1; min-width: 200px;">
+                <a href="../index.html" class="nav-link">🏠 Inicio</a>
+            </div>
+            <div style="flex: 1; text-align: center; min-width: 200px;">
+                <span style="font-weight: bold; font-size: 1.1em;">Web Hosting</span>
+            </div>
+            <div style="flex: 1; text-align: right; min-width: 200px;">
+                <a href="../08-animaciones/index.html" class="nav-link">← Anterior</a>
+                <a href="../10-css-avanzado/index.html" class="nav-link" style="margin-left: 10px;">Siguiente →</a>
+            </div>
+        </div>
+    </nav>
+
+
     <h1>Web Hosting</h1>
     <p>Publicar tu sitio web en internet.</p>
 
@@ -107,4 +146,5 @@
     </div>
 </body>
 </html>
+
 
