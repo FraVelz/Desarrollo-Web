@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Avanzado - Desarrollo Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h2 {
+            color: #555;
+            margin-top: 30px;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+        .seccion {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        hr {
+            border: none;
+            border-top: 2px solid #ddd;
+            margin: 40px 0;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        /* 02-textarea-labels */
+form {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 100px;
+}
+
+small {
+    display: block;
+    margin-top: 5px;
+    color: #666;
+    font-size: 12px;
+}
+/* 07-tablas */
+table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+caption {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    caption-side: top;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #667eea;
+    color: white;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+tbody tr:hover {
+    background-color: #e3f2fd;
+}
+
+tfoot {
+    font-weight: bold;
+    background-color: #f0f0f0;
+}
+/* 11-html-semantico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #667eea;
+    color: white;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+article {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+article header {
+    background-color: transparent;
+    color: #333;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+section {
+    margin: 20px 0;
+}
+
+aside {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside li {
+    margin: 10px 0;
+}
+
+aside a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+address {
+    margin-top: 10px;
+    font-style: normal;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Html Avanzado</h1>
+    <p>Contenido consolidado de todos los temas de esta sección.</p>
+    <hr>
+    <!-- 01-metatags-comentarios-iconos -->
+    <div class="seccion">
+        <h1>Metatags, Comentarios e Iconos</h1>
+    
+    <!-- Este es un comentario HTML -->
+    <!-- Los comentarios no se muestran en el navegador -->
+    
+    <h2>Comentarios en HTML</h2>
+    <p>Los comentarios se escriben con &lt;!-- texto --&gt;</p>
+    <!-- Comentario de una línea -->
+    
+    <!-- 
+        Comentario
+        de múltiples
+        líneas
+    -->
+    
+    <h2>Metatags Importantes</h2>
+    <ul>
+        <li><strong>charset:</strong> Define la codificación de caracteres (UTF-8)</li>
+        <li><strong>viewport:</strong> Controla cómo se muestra en dispositivos móviles</li>
+        <li><strong>description:</strong> Descripción para motores de búsqueda</li>
+        <li><strong>keywords:</strong> Palabras clave (menos importante ahora)</li>
+        <li><strong>author:</strong> Autor de la página</li>
+    </ul>
+    
+    <h2>Iconos (Favicon)</h2>
+    <p>El favicon aparece en la pestaña del navegador.</p>
+    <p>Formatos comunes: .ico, .png, .svg</p>
+    
+    <h2>Comentarios Útiles</h2>
+    <!-- Sección de navegación -->
+    <nav>
+        <ul>
+            <li>Inicio</li>
+            <li>Acerca</li>
+        </ul>
+    </nav>
+    
+    <!-- Sección principal -->
+    <main>
+        <p>Contenido principal</p>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <p>Pie de página</p>
+    </footer>
+    </div>
+    <hr>
+    <!-- 02-textarea-labels -->
+    <div class="seccion">
+        <h1>Textarea y Labels</h1>
+    
+    <h2>Label Básico</h2>
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+    </form>
+    
+    <h2>Label Implícito</h2>
+    <form>
+        <label>
+            Email:
+            <input type="email" name="email">
+        </label>
+    </form>
+    
+    <h2>Textarea Básico</h2>
+    <form>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea>
+    </form>
+    
+    <h2>Textarea con Placeholder</h2>
+    <form>
+        <label for="comentario">Comentario:</label>
+        <textarea 
+            id="comentario" 
+            name="comentario" 
+            rows="5" 
+            cols="50"
+            placeholder="Escribe tu comentario aquí...">
+        </textarea>
+    </form>
+    
+    <h2>Textarea con Tamaño Fijo</h2>
+    <form>
+        <label for="descripcion">Descripción:</label>
+        <textarea 
+            id="descripcion" 
+            name="descripcion" 
+            rows="6" 
+            cols="60"
+            maxlength="500">
+        </textarea>
+        <small>Máximo 500 caracteres</small>
+    </form>
+    
+    <h2>Textarea con Resize Controlado</h2>
+    <form>
+        <label for="notas">Notas (sin redimensionar):</label>
+        <textarea 
+            id="notas" 
+            name="notas" 
+            rows="4" 
+            cols="50"
+            style="resize: none;">
+        </textarea>
+    </form>
+    
+    <h2>Ventajas de Usar Labels</h2>
+    <ul>
+        <li>Mejora la accesibilidad (lectores de pantalla)</li>
+        <li>Hace clicable el label para enfocar el input</li>
+        <li>Mejor experiencia de usuario</li>
+        <li>HTML semántico</li>
+    </ul>
+    </div>
+    <hr>
+    <!-- 03-select-datalist-option -->
+    <div class="seccion">
+        <h1>Select, Datalist y Option</h1>
+    
+    <h2>Select Básico</h2>
+    <label for="pais">País:</label>
+    <select id="pais" name="pais">
+        <option value="">Selecciona un país</option>
+        <option value="es">España</option>
+        <option value="mx">México</option>
+        <option value="ar">Argentina</option>
+    </select>
+    
+    <h2>Datalist (Autocompletado)</h2>
+    <label for="navegador">Navegador:</label>
+    <input list="navegadores" id="navegador" name="navegador">
+    <datalist id="navegadores">
+        <option value="Chrome">
+        <option value="Firefox">
+        <option value="Safari">
+        <option value="Edge">
+    </datalist>
+    
+    <h2>Select Múltiple</h2>
+    <label for="lenguajes">Lenguajes de Programación:</label>
+    <select id="lenguajes" name="lenguajes" multiple>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="js">JavaScript</option>
+        <option value="py">Python</option>
+    </select>
+    </div>
+    <hr>
+    <!-- 04-fieldset-legend -->
+    <div class="seccion">
+        <h1>Fieldset y Legend</h1>
+    
+    <form>
+        <fieldset>
+            <legend>Información Personal</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </fieldset>
+        
+        <fieldset>
+            <legend>Preferencias</legend>
+            <label>
+                <input type="checkbox" name="newsletter"> Suscribirse al newsletter
+            </label><br>
+            <label>
+                <input type="checkbox" name="updates"> Recibir actualizaciones
+            </label>
+        </fieldset>
+        
+        <button type="submit">Enviar</button>
+    </form>
+    </div>
+    <hr>
+    <!-- 05-details-summary -->
+    <div class="seccion">
+        <h1>Details y Summary</h1>
+    
+    <details>
+        <summary>¿Qué es HTML?</summary>
+        <p>HTML es el lenguaje de marcado estándar para crear páginas web.</p>
+    </details>
+    
+    <details open>
+        <summary>¿Qué es CSS?</summary>
+        <p>CSS es el lenguaje de estilos que describe cómo se muestran los elementos HTML.</p>
+    </details>
+    
+    <details>
+        <summary>Información Adicional</summary>
+        <ul>
+            <li>Punto 1</li>
+            <li>Punto 2</li>
+            <li>Punto 3</li>
+        </ul>
+    </details>
+    </div>
+    <hr>
+    <!-- 06-enlaces-avanzado -->
+    <div class="seccion">
+        <h1>Enlaces Avanzados</h1>
+    
+    <h2>Enlace con Download</h2>
+    <a href="archivo.pdf" download="mi-archivo.pdf">Descargar PDF</a>
+    
+    <h2>Enlace con Rel</h2>
+    <a href="https://ejemplo.com" rel="noopener noreferrer">Enlace seguro</a>
+    
+    <h2>Enlace a Sección Específica</h2>
+    <a href="#seccion-final">Ir a sección final</a>
+    
+    <h2>Enlace con Protocolo Específico</h2>
+    <a href="mailto:correo@ejemplo.com">Enviar email</a>
+    <a href="tel:+1234567890">Llamar</a>
+    
+    <h2>Enlace con Title</h2>
+    <a href="#" title="Información adicional sobre el enlace">Enlace con tooltip</a>
+    
+    <div id="seccion-final" style="margin-top: 500px;">
+        <h2>Sección Final</h2>
+        <p>Has llegado aquí usando un enlace interno.</p>
+    </div>
+    </div>
+    <hr>
+    <!-- 07-tablas -->
+    <div class="seccion">
+        <h1>Tablas en HTML</h1>
+    
+    <h2>Tabla Básica</h2>
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Ciudad</th>
+        </tr>
+        <tr>
+            <td>Juan</td>
+            <td>25</td>
+            <td>Madrid</td>
+        </tr>
+        <tr>
+            <td>María</td>
+            <td>30</td>
+            <td>Barcelona</td>
+        </tr>
+    </table>
+    
+    <h2>Tabla con Encabezados</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Laptop</td>
+                <td>$999</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Mouse</td>
+                <td>$25</td>
+                <td>20</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2"><strong>Total</strong></td>
+                <td><strong>25</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+    
+    <h2>Tabla con Caption</h2>
+    <table>
+        <caption>Horario de Clases</caption>
+        <thead>
+            <tr>
+                <th>Hora</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miércoles</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>9:00</td>
+                <td>Matemáticas</td>
+                <td>Historia</td>
+                <td>Ciencias</td>
+            </tr>
+            <tr>
+                <td>10:00</td>
+                <td>Inglés</td>
+                <td>Matemáticas</td>
+                <td>Arte</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>Tabla con Celdas Combinadas</h2>
+    <table>
+        <tr>
+            <th rowspan="2">Mes</th>
+            <th colspan="2">Ventas</th>
+        </tr>
+        <tr>
+            <th>Producto A</th>
+            <th>Producto B</th>
+        </tr>
+        <tr>
+            <td>Enero</td>
+            <td>100</td>
+            <td>150</td>
+        </tr>
+        <tr>
+            <td>Febrero</td>
+            <td>120</td>
+            <td>180</td>
+        </tr>
+    </table>
+    </div>
+    <hr>
+    <!-- 08-audio-video -->
+    <div class="seccion">
+        <h1>Audio y Video en HTML</h1>
+    
+    <h2>Audio</h2>
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        <source src="audio.ogg" type="audio/ogg">
+        Tu navegador no soporta audio.
+    </audio>
+    
+    <h2>Video</h2>
+    <video controls width="640" height="360">
+        <source src="video.mp4" type="video/mp4">
+        <source src="video.webm" type="video/webm">
+        Tu navegador no soporta video.
+    </video>
+    
+    <h2>Video con Autoplay y Loop</h2>
+    <video autoplay loop muted>
+        <source src="video.mp4" type="video/mp4">
+    </video>
+    </div>
+    <hr>
+    <!-- 09-lazy-loading -->
+    <div class="seccion">
+        <h1>Lazy Loading</h1>
+    
+    <p>Lazy loading carga imágenes solo cuando son necesarias, mejorando el rendimiento.</p>
+    
+    <h2>Imagen con Lazy Loading</h2>
+    <img src="imagen.jpg" alt="Imagen" loading="lazy">
+    
+    <h2>Iframe con Lazy Loading</h2>
+    <iframe src="https://www.example.com" loading="lazy" width="600" height="400"></iframe>
+    
+    <h2>Ventajas</h2>
+    <ul>
+        <li>Mejor rendimiento</li>
+        <li>Carga más rápida de la página</li>
+        <li>Ahorro de ancho de banda</li>
+    </ul>
+    </div>
+    <hr>
+    <!-- 11-html-semantico -->
+    <div class="seccion">
+        <!-- Header: Encabezado de la página -->
+    <header>
+        <h1>Mi Sitio Web</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Main: Contenido principal -->
+    <main>
+        <!-- Article: Artículo independiente -->
+        <article>
+            <header>
+                <h2>Título del Artículo</h2>
+                <p>Publicado el <time datetime="2024-01-15">15 de Enero, 2024</time></p>
+            </header>
+            
+            <section>
+                <h3>Introducción</h3>
+                <p>Este es un ejemplo de HTML semántico que mejora la accesibilidad y SEO.</p>
+            </section>
+            
+            <section>
+                <h3>Contenido Principal</h3>
+                <p>El HTML semántico usa etiquetas que tienen significado, no solo presentación.</p>
+            </section>
+            
+            <footer>
+                <p>Autor: Juan Pérez</p>
+            </footer>
+        </article>
+        
+        <!-- Aside: Contenido relacionado pero secundario -->
+        <aside>
+            <h3>Artículos Relacionados</h3>
+            <ul>
+                <li><a href="#">Artículo 1</a></li>
+                <li><a href="#">Artículo 2</a></li>
+            </ul>
+        </aside>
+    </main>
+    
+    <!-- Footer: Pie de página -->
+    <footer>
+        <p>&copy; 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+        <address>
+            Contacto: <a href="mailto:info@misitio.com">info@misitio.com</a>
+        </address>
+    </footer>
+    </div>
+    <hr>
+
+</body>
+</html>

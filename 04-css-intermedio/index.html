@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Intermedio - Desarrollo Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h2 {
+            color: #555;
+            margin-top: 30px;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+        .seccion {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        hr {
+            border: none;
+            border-top: 2px solid #ddd;
+            margin: 40px 0;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        /* 03-pseudoclases */
+/* Pseudoclases de estado */
+.enlace {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.enlace-hover:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.enlace-active:active {
+    background-color: #004085;
+    transform: scale(0.95);
+}
+
+.enlace-visited:visited {
+    color: #6c757d;
+}
+
+/* Pseudoclases de posición */
+.lista-posicion li:first-child {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.lista-posicion li:last-child {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.lista-posicion li:nth-child(2) {
+    color: #ffc107;
+}
+
+/* Pseudoclases de input */
+.input-focus:focus {
+    outline: none;
+    border: 2px solid #007bff;
+    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+
+.input-filled:valid {
+    border: 2px solid #28a745;
+}
+
+input[type="checkbox"]:checked + label {
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Pseudoclase :nth-child */
+.contenedor-nth div:nth-child(odd) {
+    background-color: #e3f2fd;
+}
+
+.contenedor-nth div:nth-child(even) {
+    background-color: #fff3cd;
+}
+
+.contenedor-nth div:nth-child(3) {
+    background-color: #d4edda;
+    font-weight: bold;
+}
+
+/* Pseudoclase :not() */
+.contenedor-not p:not(.especial) {
+    color: #666;
+    font-style: italic;
+}
+
+.contenedor-not p.especial {
+    color: #007bff;
+    font-weight: bold;
+}
+/* 10-transiciones */
+.transicion-basica {
+    width: 200px;
+    height: 100px;
+    background-color: #2196f3;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+    margin: 20px 0;
+}
+
+.transicion-basica:hover {
+    background-color: #1976d2;
+}
+
+.transicion-multiple {
+    width: 200px;
+    height: 100px;
+    background-color: #4caf50;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin: 20px 0;
+}
+
+.transicion-multiple:hover {
+    background-color: #388e3c;
+    transform: scale(1.1);
+    border-radius: 10px;
+}
+
+.transicion-ease,
+.transicion-linear,
+.transicion-ease-in,
+.transicion-ease-out,
+.transicion-ease-in-out {
+    width: 200px;
+    height: 50px;
+    background-color: #ff9800;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    transition: transform 1s;
+}
+
+.transicion-ease {
+    transition-timing-function: ease;
+}
+
+.transicion-linear {
+    transition-timing-function: linear;
+}
+
+.transicion-ease-in {
+    transition-timing-function: ease-in;
+}
+
+.transicion-ease-out {
+    transition-timing-function: ease-out;
+}
+
+.transicion-ease-in-out {
+    transition-timing-function: ease-in-out;
+}
+
+.transicion-ease:hover,
+.transicion-linear:hover,
+.transicion-ease-in:hover,
+.transicion-ease-out:hover,
+.transicion-ease-in-out:hover {
+    transform: translateX(200px);
+}
+
+.transicion-delay {
+    width: 200px;
+    height: 100px;
+    background-color: #e91e63;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s ease 0.3s;
+    margin: 20px 0;
+}
+
+.transicion-delay:hover {
+    background-color: #c2185b;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Css Intermedio</h1>
+    <p>Contenido consolidado de todos los temas de esta sección.</p>
+    <hr>
+    <!-- 03-pseudoclases -->
+    <div class="seccion">
+        <h1>Pseudoclases en CSS</h1>
+    
+    <h2>Pseudoclases de Estado</h2>
+    <a href="#" class="enlace">Enlace normal</a>
+    <a href="#" class="enlace-hover">Pasa el mouse (hover)</a>
+    <a href="#" class="enlace-active">Mantén presionado (active)</a>
+    <a href="#" class="enlace-visited">Enlace visitado (visited)</a>
+    
+    <h2>Pseudoclases de Posición</h2>
+    <ul class="lista-posicion">
+        <li>Primer elemento (first-child)</li>
+        <li>Segundo elemento</li>
+        <li>Tercer elemento</li>
+        <li>Último elemento (last-child)</li>
+    </ul>
+    
+    <h2>Pseudoclases de Input</h2>
+    <form>
+        <input type="text" placeholder="Focus aquí" class="input-focus">
+        <input type="text" value="Texto" class="input-filled">
+        <input type="checkbox" id="check">
+        <label for="check">Checkbox con estilo</label>
+    </form>
+    
+    <h2>Pseudoclase :nth-child</h2>
+    <div class="contenedor-nth">
+        <div>Elemento 1</div>
+        <div>Elemento 2</div>
+        <div>Elemento 3</div>
+        <div>Elemento 4</div>
+        <div>Elemento 5</div>
+    </div>
+    
+    <h2>Pseudoclase :not()</h2>
+    <div class="contenedor-not">
+        <p class="especial">Párrafo especial</p>
+        <p>Párrafo normal</p>
+        <p>Otro párrafo normal</p>
+    </div>
+    </div>
+    <hr>
+    <!-- 10-transiciones -->
+    <div class="seccion">
+        <h1>Transiciones CSS</h1>
+    
+    <h2>Transición Básica</h2>
+    <div class="transicion-basica">Pasa el mouse</div>
+    
+    <h2>Transición Múltiple</h2>
+    <div class="transicion-multiple">Múltiples propiedades</div>
+    
+    <h2>Transición con Timing Function</h2>
+    <div class="transicion-ease">Ease (por defecto)</div>
+    <div class="transicion-linear">Linear</div>
+    <div class="transicion-ease-in">Ease-in</div>
+    <div class="transicion-ease-out">Ease-out</div>
+    <div class="transicion-ease-in-out">Ease-in-out</div>
+    
+    <h2>Transición con Delay</h2>
+    <div class="transicion-delay">Con retraso</div>
+    </div>
+    <hr>
+
+</body>
+</html>

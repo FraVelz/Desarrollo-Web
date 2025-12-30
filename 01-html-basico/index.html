@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Básico - Desarrollo Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h2 {
+            color: #555;
+            margin-top: 30px;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+        h3 {
+            color: #666;
+            margin-top: 20px;
+        }
+        .seccion {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        hr {
+            border: none;
+            border-top: 2px solid #ddd;
+            margin: 40px 0;
+        }
+        form {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: white;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            margin-top: 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Básico</h1>
+    <p>Fundamentos de HTML para crear la estructura de páginas web.</p>
+
+    <!-- SECCIÓN 1: Estructura de una Etiqueta -->
+    <div class="seccion">
+        <h1>1. Estructura de una Etiqueta HTML</h1>
+        
+        <h2>Componentes de una Etiqueta</h2>
+        <pre><code>&lt;etiqueta atributo="valor"&gt;Contenido&lt;/etiqueta&gt;</code></pre>
+        
+        <h2>Partes de una Etiqueta</h2>
+        <ul>
+            <li><strong>&lt;etiqueta&gt;</strong> - Etiqueta de apertura</li>
+            <li><strong>atributo="valor"</strong> - Atributos (opcionales)</li>
+            <li><strong>Contenido</strong> - Texto o elementos hijos</li>
+            <li><strong>&lt;/etiqueta&gt;</strong> - Etiqueta de cierre</li>
+        </ul>
+        
+        <h2>Ejemplos Prácticos</h2>
+        
+        <p>Este es un párrafo con texto.</p>
+        
+        <a href="https://www.ejemplo.com" target="_blank">Enlace con atributos</a>
+        
+        <img src="https://via.placeholder.com/150" alt="Imagen de ejemplo">
+        <br>
+        <hr>
+        
+        <h2>Tipos de Etiquetas</h2>
+        <ul>
+            <li><strong>Etiquetas de bloque:</strong> Ocupan todo el ancho disponible (p, div, h1-h6)</li>
+            <li><strong>Etiquetas en línea:</strong> Solo ocupan su contenido (span, a, img)</li>
+            <li><strong>Etiquetas void:</strong> No tienen contenido ni cierre (img, br, hr)</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <!-- SECCIÓN 2: Estructura de una Página WEB -->
+    <div class="seccion">
+        <h1>2. Estructura de una Página WEB</h1>
+        
+        <header>
+            <h2>Mi Página Web</h2>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section id="inicio">
+                <h3>Bienvenido</h3>
+                <p>Esta es la sección principal de la página.</p>
+            </section>
+            
+            <section id="sobre">
+                <h3>Sobre Nosotros</h3>
+                <p>Información sobre el sitio web.</p>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <hr>
+
+    <!-- SECCIÓN 3: Párrafos y Encabezados -->
+    <div class="seccion">
+        <h1>3. Párrafos y Encabezados</h1>
+        
+        <h2>Encabezados</h2>
+        <h1>Encabezado de Nivel 1 (h1) - El más importante</h1>
+        <h2>Encabezado de Nivel 2 (h2)</h2>
+        <h3>Encabezado de Nivel 3 (h3)</h3>
+        <h4>Encabezado de Nivel 4 (h4)</h4>
+        <h5>Encabezado de Nivel 5 (h5)</h5>
+        <h6>Encabezado de Nivel 6 (h6)</h6>
+        
+        <p>Este es un párrafo normal. Los párrafos se usan para bloques de texto.</p>
+        
+        <h2>Elementos de Texto</h2>
+        <p>Texto <strong>en negrita</strong> usando &lt;strong&gt;</p>
+        <p>Texto <em>en cursiva</em> usando &lt;em&gt;</p>
+        <p>Texto <mark>resaltado</mark> usando &lt;mark&gt;</p>
+        <p>Texto <small>pequeño</small> usando &lt;small&gt;</p>
+        <p>Texto <del>tachado</del> usando &lt;del&gt;</p>
+        <p>Texto <ins>subrayado</ins> usando &lt;ins&gt;</p>
+        <p>Texto <sub>subíndice</sub> y <sup>superíndice</sup></p>
+        
+        <h2>Saltos de Línea</h2>
+        <p>Primera línea<br>Segunda línea después de un salto de línea</p>
+        
+        <h2>Línea Horizontal</h2>
+        <hr>
+        <p>Texto después de una línea horizontal.</p>
+    </div>
+
+    <hr>
+
+    <!-- SECCIÓN 4: Listas -->
+    <div class="seccion">
+        <h1>4. Listas</h1>
+        
+        <h2>Lista Desordenada (ul - unordered list)</h2>
+        <ul>
+            <li>Elemento 1</li>
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+        </ul>
+        
+        <h2>Lista Ordenada (ol - ordered list)</h2>
+        <ol>
+            <li>Primer paso</li>
+            <li>Segundo paso</li>
+            <li>Tercer paso</li>
+        </ol>
+        
+        <h2>Lista de Definición (dl - definition list)</h2>
+        <dl>
+            <dt>HTML</dt>
+            <dd>Lenguaje de marcado para crear páginas web</dd>
+            
+            <dt>CSS</dt>
+            <dd>Lenguaje de estilos para diseñar páginas web</dd>
+            
+            <dt>JavaScript</dt>
+            <dd>Lenguaje de programación para interactividad</dd>
+        </dl>
+        
+        <h2>Listas Anidadas</h2>
+        <ul>
+            <li>Frutas
+                <ul>
+                    <li>Manzana</li>
+                    <li>Plátano</li>
+                    <li>Naranja</li>
+                </ul>
+            </li>
+            <li>Verduras
+                <ol>
+                    <li>Lechuga</li>
+                    <li>Tomate</li>
+                    <li>Zanahoria</li>
+                </ol>
+            </li>
+        </ul>
+        
+        <h2>Atributos de Listas</h2>
+        <ol type="A">
+            <li>Lista ordenada con letras mayúsculas</li>
+            <li>Usando type="A"</li>
+        </ol>
+        
+        <ol type="i">
+            <li>Lista ordenada con números romanos</li>
+            <li>Usando type="i"</li>
+        </ol>
+        
+        <ol start="10">
+            <li>Lista que empieza en 10</li>
+            <li>Usando start="10"</li>
+        </ol>
+    </div>
+
+    <hr>
+
+    <!-- SECCIÓN 5: Enlaces -->
+    <div class="seccion">
+        <h1>5. Enlaces (Básico)</h1>
+        
+        <h2>Enlace Externo</h2>
+        <p>Visita <a href="https://www.google.com">Google</a> para buscar información.</p>
+        
+        <h2>Enlace Interno (misma página)</h2>
+        <p>Ve a la <a href="#seccion-final">sección final</a> de esta página.</p>
+        
+        <h2>Enlace con Atributo target</h2>
+        <p>Abre <a href="https://www.github.com" target="_blank">GitHub</a> en una nueva pestaña.</p>
+        
+        <h2>Enlace de Email</h2>
+        <p>Envía un correo a <a href="mailto:ejemplo@correo.com">ejemplo@correo.com</a></p>
+        
+        <h2>Enlace de Teléfono</h2>
+        <p>Llama a <a href="tel:+1234567890">+1 234 567 890</a></p>
+        
+        <h2>Enlace de Descarga</h2>
+        <p>Descarga el <a href="archivo.pdf" download>documento PDF</a></p>
+        
+        <h2>Enlace como Botón</h2>
+        <a href="https://www.ejemplo.com" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Botón de Enlace</a>
+    </div>
+
+    <hr>
+
+    <!-- SECCIÓN 6: Imágenes y Rutas -->
+    <div class="seccion">
+        <h1>6. Imágenes y Rutas</h1>
+        
+        <h2>Imagen desde URL Externa</h2>
+        <img src="https://via.placeholder.com/300x200" alt="Imagen de ejemplo desde URL">
+        
+        <h2>Imagen con Atributos</h2>
+        <img 
+            src="https://via.placeholder.com/400x300" 
+            alt="Descripción de la imagen"
+            width="400"
+            height="300"
+            title="Título de la imagen al pasar el mouse"
+        >
+        
+        <h2>Tipos de Rutas</h2>
+        
+        <h3>Ruta Relativa (misma carpeta)</h3>
+        <p>Si la imagen está en la misma carpeta: <code>src="imagen.jpg"</code></p>
+        
+        <h3>Ruta Relativa (carpeta padre)</h3>
+        <p>Para ir a la carpeta padre: <code>src="../imagen.jpg"</code></p>
+        
+        <h3>Ruta Relativa (subcarpeta)</h3>
+        <p>Para ir a una subcarpeta: <code>src="imagenes/imagen.jpg"</code></p>
+        
+        <h3>Ruta Absoluta</h3>
+        <p>Desde la raíz del sitio: <code>src="/imagenes/imagen.jpg"</code></p>
+        
+        <h3>URL Completa</h3>
+        <p>Desde internet: <code>src="https://ejemplo.com/imagen.jpg"</code></p>
+        
+        <h2>Imagen con Figura y Leyenda</h2>
+        <figure>
+            <img src="https://via.placeholder.com/500x300" alt="Imagen con figura">
+            <figcaption>Esta es una leyenda descriptiva de la imagen</figcaption>
+        </figure>
+        
+        <h2>Imagen Responsive</h2>
+        <img 
+            src="https://via.placeholder.com/800x600" 
+            alt="Imagen responsive"
+            style="max-width: 100%; height: auto;"
+        >
+        
+        <h2>Atributo alt (Importante para Accesibilidad)</h2>
+        <p>El atributo <code>alt</code> es obligatorio y describe la imagen para:</p>
+        <ul>
+            <li>Lectores de pantalla</li>
+            <li>Cuando la imagen no carga</li>
+            <li>SEO (optimización para motores de búsqueda)</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <!-- SECCIÓN 7: Formularios -->
+    <div class="seccion">
+        <h1>7. Formularios</h1>
+        
+        <form action="#" method="POST">
+            <h2>Formulario de Ejemplo</h2>
+            
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="correo@ejemplo.com" required>
+            
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="1" max="120">
+            
+            <label for="fecha">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha" name="fecha">
+            
+            <label>Género:</label>
+            <input type="radio" id="masculino" name="genero" value="masculino">
+            <label for="masculino" style="display: inline; font-weight: normal;">Masculino</label>
+            
+            <input type="radio" id="femenino" name="genero" value="femenino">
+            <label for="femenino" style="display: inline; font-weight: normal;">Femenino</label>
+            
+            <label style="margin-top: 15px;">
+                <input type="checkbox" name="terminos" required>
+                Acepto los términos y condiciones
+            </label>
+            
+            <button type="submit">Enviar Formulario</button>
+            <button type="reset">Limpiar</button>
+        </form>
+        
+        <h2>Tipos de Input</h2>
+        <ul>
+            <li><strong>text:</strong> Texto simple</li>
+            <li><strong>email:</strong> Validación de email</li>
+            <li><strong>password:</strong> Contraseña (oculta)</li>
+            <li><strong>number:</strong> Números</li>
+            <li><strong>date:</strong> Fecha</li>
+            <li><strong>checkbox:</strong> Casillas de verificación</li>
+            <li><strong>radio:</strong> Botones de opción</li>
+            <li><strong>submit:</strong> Botón de envío</li>
+        </ul>
+    </div>
+
+    <!-- Sección final para el enlace interno -->
+    <div id="seccion-final" style="margin-top: 500px; padding-top: 50px;">
+        <h2>Sección Final</h2>
+        <p>Has llegado a la sección final usando un enlace interno.</p>
+    </div>
+</body>
+</html>
+

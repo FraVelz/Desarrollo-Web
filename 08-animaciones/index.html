@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones - Desarrollo Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h2 {
+            color: #555;
+            margin-top: 30px;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+        .seccion {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        hr {
+            border: none;
+            border-top: 2px solid #ddd;
+            margin: 40px 0;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        /* 02-animaciones */
+/* Animación básica */
+.animacion-basica {
+    width: 200px;
+    height: 100px;
+    background-color: #2196f3;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin: 20px 0;
+}
+
+.animacion-basica:hover {
+    background-color: #1976d2;
+    transform: scale(1.1);
+}
+
+/* Animación con @keyframes */
+@keyframes mover {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(200px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.animacion-keyframes {
+    width: 100px;
+    height: 100px;
+    background-color: #4caf50;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    animation: mover 2s infinite;
+    margin: 20px 0;
+}
+
+/* Animación de rotación */
+@keyframes rotar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animacion-rotacion {
+    font-size: 48px;
+    display: inline-block;
+    animation: rotar 2s linear infinite;
+    margin: 20px 0;
+}
+
+/* Animación de rebote */
+@keyframes rebote {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+.animacion-rebote {
+    width: 100px;
+    height: 100px;
+    background-color: #ff9800;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    animation: rebote 1s infinite;
+    margin: 20px 0;
+}
+
+/* Animación de pulso */
+@keyframes pulso {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+}
+
+.animacion-pulso {
+    width: 100px;
+    height: 100px;
+    background-color: #e91e63;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    animation: pulso 1.5s infinite;
+    margin: 20px 0;
+}
+
+/* Animación múltiple */
+@keyframes multiple {
+    0% {
+        transform: translateX(0) rotate(0deg);
+        background-color: #2196f3;
+    }
+    50% {
+        transform: translateX(200px) rotate(180deg);
+        background-color: #4caf50;
+    }
+    100% {
+        transform: translateX(0) rotate(360deg);
+        background-color: #2196f3;
+    }
+}
+
+.animacion-multiple {
+    width: 100px;
+    height: 100px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    animation: multiple 3s infinite;
+    margin: 20px 0;
+}
+
+/* Control de animación */
+.animacion-pausada {
+    width: 200px;
+    height: 100px;
+    background-color: #9c27b0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    animation: mover 2s infinite;
+    animation-play-state: paused;
+    margin: 20px 0;
+}
+
+.animacion-pausada:hover {
+    animation-play-state: running;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Animaciones</h1>
+    <p>Contenido consolidado de todos los temas de esta sección.</p>
+    <hr>
+    <!-- 02-animaciones -->
+    <div class="seccion">
+        <h1>Animaciones en CSS</h1>
+    
+    <h2>Animación Básica</h2>
+    <div class="animacion-basica">Pasa el mouse</div>
+    
+    <h2>Animación con @keyframes</h2>
+    <div class="animacion-keyframes">Animación continua</div>
+    
+    <h2>Animación de Rotación</h2>
+    <div class="animacion-rotacion">🔄</div>
+    
+    <h2>Animación de Rebote</h2>
+    <div class="animacion-rebote">Rebote</div>
+    
+    <h2>Animación de Pulso</h2>
+    <div class="animacion-pulso">Pulso</div>
+    
+    <h2>Animación Múltiple</h2>
+    <div class="animacion-multiple">Múltiple</div>
+    
+    <h2>Control de Animación</h2>
+    <div class="animacion-pausada">Animación pausada (hover para continuar)</div>
+    </div>
+    <hr>
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Grid - Desarrollo Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h2 {
+            color: #555;
+            margin-top: 30px;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+        .seccion {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        hr {
+            border: none;
+            border-top: 2px solid #ddd;
+            margin: 40px 0;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        /* 01-introduccion-grid */
+/* Grid básico */
+.grid-basico {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.grid-basico .item {
+    background-color: #2196f3;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Grid con tamaños específicos */
+.grid-tamaños {
+    display: grid;
+    grid-template-columns: 200px 1fr 100px;
+    grid-template-rows: 100px 150px;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.grid-tamaños .item {
+    background-color: #4caf50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Grid con gap */
+.grid-gap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.grid-gap .item {
+    background-color: #ff9800;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Grid con áreas nombradas */
+.grid-areas {
+    display: grid;
+    grid-template-columns: 200px 1fr 150px;
+    grid-template-rows: 80px 1fr 60px;
+    grid-template-areas:
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+    gap: 10px;
+    margin: 20px 0;
+    min-height: 400px;
+}
+
+.grid-areas header {
+    grid-area: header;
+    background-color: #667eea;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.grid-areas nav {
+    grid-area: nav;
+    background-color: #f093fb;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.grid-areas main {
+    grid-area: main;
+    background-color: #4facfe;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.grid-areas aside {
+    grid-area: aside;
+    background-color: #43e97b;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.grid-areas footer {
+    grid-area: footer;
+    background-color: #fa709a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Css Grid</h1>
+    <p>Contenido consolidado de todos los temas de esta sección.</p>
+    <hr>
+    <!-- 01-introduccion-grid -->
+    <div class="seccion">
+        <h1>Introducción a CSS Grid</h1>
+    
+    <p>CSS Grid es un sistema de diseño bidimensional que permite crear layouts complejos con filas y columnas.</p>
+    
+    <h2>Grid Básico</h2>
+    <div class="grid-basico">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    
+    <h2>Grid con Tamaños Específicos</h2>
+    <div class="grid-tamaños">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </div>
+    
+    <h2>Grid con Gap (Espaciado)</h2>
+    <div class="grid-gap">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    
+    <h2>Grid con Áreas Nombradas</h2>
+    <div class="grid-areas">
+        <header>Header</header>
+        <nav>Nav</nav>
+        <main>Main</main>
+        <aside>Aside</aside>
+        <footer>Footer</footer>
+    </div>
+    </div>
+    <hr>
+
+</body>
+</html>

@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Basico - Desarrollo Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h2 {
+            color: #555;
+            margin-top: 30px;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+        .seccion {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        hr {
+            border: none;
+            border-top: 2px solid #ddd;
+            margin: 40px 0;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        /* 01-introduccion-css */
+/* CSS Externo - Archivo style.css */
+
+/* Estilos para elementos con clase "ejemplo-externo" */
+.ejemplo-externo {
+    background-color: #f3e5f5;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.ejemplo-externo h3 {
+    color: #7b1fa2;
+    margin-top: 0;
+}
+
+.ejemplo-externo p {
+    color: #4a148c;
+    line-height: 1.6;
+}
+/* 02-selectores-basico */
+/* Selector de Etiqueta - Aplica a todos los elementos <p> */
+p {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Selector de Clase - Aplica a elementos con class="destacado" */
+.destacado {
+    background-color: #fff3cd;
+    padding: 10px;
+    border-left: 4px solid #ffc107;
+}
+
+/* Selector de ID - Aplica al elemento con id="especial" */
+#especial {
+    background-color: #d1ecf1;
+    padding: 15px;
+    border: 2px solid #0c5460;
+    font-weight: bold;
+}
+
+/* Selector Universal - Aplica a todos los elementos */
+* {
+    box-sizing: border-box;
+}
+
+/* Selector Descendente - Aplica a <p> dentro de .padre */
+.padre p {
+    background-color: #e7f3ff;
+    padding: 8px;
+    margin: 5px 0;
+}
+
+/* Selector Múltiple - Aplica a h3 y h4 */
+h3, h4 {
+    color: #007bff;
+}
+/* 03-propiedades-texto-fuente */
+/* Propiedades de Fuente */
+
+.fuente-ejemplo {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 18px;
+}
+
+.fuente-tamano {
+    font-size: 24px; /* Tamaño absoluto */
+}
+
+.fuente-peso {
+    font-weight: bold; /* También: normal, 100-900 */
+}
+
+.fuente-estilo {
+    font-style: italic; /* También: normal, oblique */
+}
+
+/* Propiedades de Texto - Alineación */
+.texto-izquierda {
+    text-align: left;
+}
+
+.texto-centro {
+    text-align: center;
+}
+
+.texto-derecha {
+    text-align: right;
+}
+
+.texto-justificado {
+    text-align: justify;
+}
+
+/* Decoración de Texto */
+.texto-subrayado {
+    text-decoration: underline;
+}
+
+.texto-tachado {
+    text-decoration: line-through;
+}
+
+.texto-sin-decoracion {
+    text-decoration: none;
+}
+
+/* Transformación de Texto */
+.texto-mayusculas {
+    text-transform: uppercase;
+}
+
+.texto-minusculas {
+    text-transform: lowercase;
+}
+
+.texto-capitalizado {
+    text-transform: capitalize;
+}
+
+/* Espaciado */
+.espaciado-letras {
+    letter-spacing: 3px;
+}
+
+.espaciado-palabras {
+    word-spacing: 10px;
+}
+
+.altura-linea {
+    line-height: 2; /* También se puede usar: 1.5, 24px, etc. */
+}
+
+/* Interlineado */
+.interlineado-normal {
+    line-height: normal;
+}
+
+.interlineado-amplio {
+    line-height: 2.5;
+}
+/* 04-tipografias-externas */
+/* Aplicando fuentes de Google Fonts */
+
+.roboto-light {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.roboto-regular {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.roboto-bold {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.open-sans {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.open-sans-semibold {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* Fuentes del sistema como fallback */
+.sistema {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Fuente personalizada con @font-face */
+@font-face {
+    font-family: 'CustomFont';
+    src: url('ruta/a/fuente.woff2') format('woff2'),
+         url('ruta/a/fuente.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.custom-font {
+    font-family: 'CustomFont', Arial, sans-serif;
+}
+/* 05-modelo-caja */
+/* Ejemplo básico del modelo de caja */
+.caja-ejemplo {
+    background-color: #e3f2fd;
+    padding: 20px; /* Padding: espacio interno */
+    border: 3px solid #1976d2; /* Border: borde */
+    margin: 20px 0; /* Margin: espacio externo */
+    width: 500px;
+}
+
+/* Visualización del box model */
+.caja-visual {
+    width: 200px;
+    height: 100px;
+    padding: 20px; /* Espacio interno */
+    border: 5px solid #4caf50; /* Borde */
+    margin: 20px; /* Espacio externo */
+    background-color: #c8e6c9;
+}
+
+.caja-visual .contenido {
+    background-color: #81c784;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+/* Dimensiones básicas */
+.caja-dimensiones {
+    width: 300px;
+    height: 100px;
+    background-color: #fff3cd;
+    border: 2px solid #ffc107;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Box model por defecto */
+.caja-default {
+    width: 300px;
+    background-color: #d1ecf1;
+    border: 2px solid #0c5460;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Box model con padding y border */
+.caja-con-padding {
+    width: 300px;
+    padding: 20px; /* 20px en cada lado = 40px total */
+    border: 5px solid #dc3545; /* 5px en cada lado = 10px total */
+    background-color: #f8d7da;
+    margin: 10px 0;
+    /* Ancho total = 300 + 40 + 10 = 350px */
+}
+
+/* Cajas con margin */
+.caja-margin {
+    width: 200px;
+    height: 80px;
+    background-color: #e7f3ff;
+    border: 2px solid #007bff;
+    padding: 15px;
+    margin: 20px 0; /* Separación vertical entre cajas */
+}
+/* 06-relleno-margen */
+/* Padding - Relleno Interno */
+
+.padding-ejemplo {
+    background-color: #e3f2fd;
+    padding: 20px; /* 20px en todos los lados */
+    border: 2px solid #1976d2;
+    margin: 10px 0;
+}
+
+/* Padding individual por lado */
+.padding-individual {
+    background-color: #fff3cd;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    border: 2px solid #ffc107;
+    margin: 10px 0;
+}
+
+/* Padding con notación corta */
+.padding-corto {
+    background-color: #d1ecf1;
+    padding: 15px 25px; /* arriba/abajo: 15px, izquierda/derecha: 25px */
+    border: 2px solid #0c5460;
+    margin: 10px 0;
+}
+
+/* Margin - Margen Externo */
+
+.margin-ejemplo {
+    background-color: #f8d7da;
+    padding: 15px;
+    border: 2px solid #dc3545;
+    margin: 30px; /* 30px en todos los lados */
+}
+
+/* Margin individual por lado */
+.margin-individual {
+    background-color: #d4edda;
+    padding: 15px;
+    border: 2px solid #28a745;
+    margin-top: 10px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
+/* Margin auto para centrar */
+.margin-auto {
+    width: 300px;
+    background-color: #e7f3ff;
+    padding: 15px;
+    border: 2px solid #007bff;
+    margin: 20px auto; /* Centra horizontalmente */
+}
+
+/* Margin negativo */
+.contenedor {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 2px dashed #999;
+}
+
+.margin-negativo {
+    background-color: #ffebee;
+    padding: 15px;
+    border: 2px solid #f44336;
+    margin: -10px; /* Margin negativo */
+}
+
+/* Margin collapse - Colapso de márgenes */
+.margin-collapse-1 {
+    background-color: #e1bee7;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #9c27b0;
+}
+
+.margin-collapse-2 {
+    background-color: #c5cae9;
+    padding: 15px;
+    margin-top: 30px; /* Solo se aplica el mayor (30px) */
+    border: 2px solid #3f51b5;
+}
+
+/* Comparación Padding vs Margin */
+.contenedor-comparacion {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 2px solid #333;
+}
+
+.con-padding {
+    background-color: #4caf50;
+    color: white;
+    padding: 20px; /* El padding forma parte del fondo */
+    margin-bottom: 10px;
+}
+
+.con-margin {
+    background-color: #2196f3;
+    color: white;
+    padding: 20px;
+    margin-top: 20px; /* El margin es espacio invisible */
+}
+/* 07-bordes */
+/* Bordes básicos */
+.borde-solido {
+    border: 3px solid #333;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.borde-punteado {
+    border: 3px dotted #007bff;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.borde-lineas {
+    border: 3px dashed #28a745;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.borde-doble {
+    border: 5px double #dc3545;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+/* Grosor de borde */
+.borde-delgado {
+    border: 1px solid #333;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.borde-medio {
+    border: 3px solid #333;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.borde-grueso {
+    border: 10px solid #333;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+/* Bordes por lado */
+.borde-superior {
+    border-top: 5px solid #007bff;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.borde-inferior {
+    border-bottom: 5px solid #28a745;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.borde-izquierdo {
+    border-left: 5px solid #ffc107;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.borde-derecho {
+    border-right: 5px solid #dc3545;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+/* Bordes redondeados */
+.borde-redondeado {
+    border: 3px solid #007bff;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.borde-circular {
+    width: 100px;
+    height: 100px;
+    border: 3px solid #28a745;
+    border-radius: 50%; /* Hace un círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.borde-elipse {
+    width: 150px;
+    height: 100px;
+    border: 3px solid #ffc107;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+/* Bordes con colores */
+.borde-color-solido {
+    border: 5px solid #9c27b0;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #f3e5f5;
+}
+
+/* Bordes múltiples */
+.borde-multiple {
+    border-top: 3px solid #007bff;
+    border-right: 5px dashed #28a745;
+    border-bottom: 4px dotted #ffc107;
+    border-left: 6px double #dc3545;
+    padding: 15px;
+    margin: 10px 0;
+}
+/* 08-tamaño-caja */
+/* Box Sizing: Content-Box (por defecto) */
+.content-box {
+    width: 300px;
+    padding: 20px; /* 20px en cada lado = 40px total */
+    border: 5px solid #007bff; /* 5px en cada lado = 10px total */
+    background-color: #e3f2fd;
+    box-sizing: content-box; /* Por defecto */
+    margin: 10px 0;
+    /* Ancho total = 300 + 40 + 10 = 350px */
+}
+
+/* Box Sizing: Border-Box (recomendado) */
+.border-box {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #28a745;
+    background-color: #d4edda;
+    box-sizing: border-box; /* Incluye padding y border en el width */
+    margin: 10px 0;
+    /* Ancho total = 300px (el padding y border están incluidos) */
+}
+
+/* Comparación visual */
+.comparacion {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.content-box-ejemplo {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #dc3545;
+    background-color: #f8d7da;
+    box-sizing: content-box;
+    text-align: center;
+}
+
+.border-box-ejemplo {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #007bff;
+    background-color: #e3f2fd;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Mejor práctica - aplicar a todos los elementos */
+.mejor-practica {
+    background-color: #fff3cd;
+    padding: 20px;
+    border-left: 4px solid #ffc107;
+    margin: 20px 0;
+}
+
+/* Aplicar border-box globalmente (recomendado) */
+* {
+    box-sizing: border-box;
+}
+/* 09-colores */
+/* Colores por nombre */
+.color-nombre {
+    background-color: red;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+/* Colores hexadecimales */
+.color-hex {
+    background-color: #FF5733;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.color-hex-corto {
+    background-color: #F53; /* Equivale a #FF5533 */
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+/* Colores RGB */
+.color-rgb {
+    background-color: rgb(255, 87, 51);
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.color-rgba {
+    background-color: rgba(255, 87, 51, 0.5); /* 0.5 = 50% de opacidad */
+    color: #333;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #FF5733;
+}
+
+/* Colores HSL */
+.color-hsl {
+    background-color: hsl(9, 100%, 60%);
+    /* Hue (tono): 9 (rojo-naranja) */
+    /* Saturation (saturación): 100% (muy saturado) */
+    /* Lightness (luminosidad): 60% (medio) */
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.color-hsla {
+    background-color: hsla(9, 100%, 60%, 0.7);
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+/* Transparencia */
+.transparencia-opacity {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    opacity: 0.5; /* Afecta todo el elemento (fondo, texto, bordes) */
+}
+
+.transparencia-rgba {
+    background-color: rgba(0, 123, 255, 0.5); /* Solo afecta el fondo */
+    color: #333;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #007bff;
+}
+
+/* Paleta de colores */
+.paleta {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.paleta > div {
+    flex: 1;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.color-1 {
+    background-color: #FF6B6B;
+}
+
+.color-2 {
+    background-color: #4ECDC4;
+}
+
+.color-3 {
+    background-color: #45B7D1;
+}
+
+.color-4 {
+    background-color: #FFA07A;
+}
+
+.color-5 {
+    background-color: #98D8C8;
+}
+
+/* Color del sistema */
+.color-sistema {
+    color: #007bff;
+    padding: 15px;
+    margin: 10px 0;
+    border: 3px solid currentColor; /* Usa el color del texto */
+}
+/* 10-unidades */
+/* Unidades absolutas */
+.unidad-px {
+    font-size: 20px; /* Píxeles - unidad más común */
+    padding: 15px;
+    background-color: #e3f2fd;
+    margin: 10px 0;
+}
+
+.unidad-pt {
+    font-size: 16pt; /* Puntos - común en impresión */
+    padding: 15px;
+    background-color: #fff3cd;
+    margin: 10px 0;
+}
+
+.unidad-cm {
+    width: 2cm; /* Centímetros */
+    height: 1cm;
+    background-color: #d1ecf1;
+    margin: 10px 0;
+}
+
+/* Unidades relativas - em */
+.contenedor-em {
+    font-size: 16px;
+    padding: 15px;
+    background-color: #f8d7da;
+    margin: 10px 0;
+}
+
+.unidad-em {
+    font-size: 1.5em; /* 1.5 × 16px = 24px */
+    background-color: #f1c2c7;
+    padding: 10px;
+}
+
+/* Unidades relativas - rem */
+.contenedor-rem {
+    font-size: 20px; /* No afecta a rem */
+    padding: 15px;
+    background-color: #d4edda;
+    margin: 10px 0;
+}
+
+.unidad-rem {
+    font-size: 1.5rem; /* 1.5 × 16px (tamaño raíz) = 24px */
+    background-color: #c3e6cb;
+    padding: 10px;
+}
+
+/* Unidades del viewport */
+.unidad-vw {
+    width: 50vw; /* 50% del ancho del viewport */
+    background-color: #e7f3ff;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.unidad-vh {
+    height: 20vh; /* 20% del alto del viewport */
+    background-color: #cfe2ff;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.unidad-vmin {
+    width: 30vmin; /* 30% del menor (ancho o alto) */
+    background-color: #b6d4fe;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.unidad-vmax {
+    width: 30vmax; /* 30% del mayor (ancho o alto) */
+    background-color: #9ec5fe;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+/* Unidades porcentuales */
+.contenedor-porcentaje {
+    width: 500px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.unidad-porcentaje {
+    width: 50%; /* 50% del contenedor = 250px */
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+}
+
+/* Comparación em vs rem */
+.ejemplo-em {
+    font-size: 1.2em; /* 1.2 × 16px = 19.2px */
+    background-color: #fff3cd;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.hijo-em {
+    font-size: 1.2em; /* 1.2 × 19.2px = 23.04px (se acumula) */
+    background-color: #ffe69c;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.ejemplo-rem {
+    font-size: 1.2rem; /* 1.2 × 16px = 19.2px */
+    background-color: #d1ecf1;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.hijo-rem {
+    font-size: 1.2rem; /* 1.2 × 16px = 19.2px (siempre relativo a html) */
+    background-color: #bee5eb;
+    padding: 10px;
+    margin-top: 10px;
+}
+/* 11-fondos-gradientes-sombras */
+/* Fondos básicos */
+.fondo-color {
+    background-color: #e3f2fd;
+    padding: 30px;
+    margin: 10px 0;
+}
+
+.fondo-imagen {
+    background-image: url('https://via.placeholder.com/300x200');
+    background-color: #f0f0f0;
+    padding: 30px;
+    margin: 10px 0;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.fondo-repeat {
+    background-image: url('https://via.placeholder.com/50x50');
+    background-repeat: repeat;
+    padding: 30px;
+    margin: 10px 0;
+}
+
+.fondo-no-repeat {
+    background-image: url('https://via.placeholder.com/200x200');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 30px;
+    margin: 10px 0;
+    background-color: #f0f0f0;
+}
+
+.fondo-cover {
+    background-image: url('https://via.placeholder.com/800x600');
+    background-size: cover; /* Cubre todo el área */
+    background-position: center;
+    padding: 50px;
+    margin: 10px 0;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.fondo-contain {
+    background-image: url('https://via.placeholder.com/200x200');
+    background-size: contain; /* Ajusta para mostrar toda la imagen */
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 50px;
+    margin: 10px 0;
+    background-color: #f0f0f0;
+}
+
+/* Gradientes lineales */
+.gradiente-lineal-1 {
+    background: linear-gradient(to right, #FF6B6B, #4ECDC4);
+    padding: 30px;
+    margin: 10px 0;
+    color: white;
+}
+
+.gradiente-lineal-2 {
+    background: linear-gradient(to bottom, #45B7D1, #96CEB4);
+    padding: 30px;
+    margin: 10px 0;
+    color: white;
+}
+
+.gradiente-lineal-3 {
+    background: linear-gradient(45deg, #FFA07A, #98D8C8);
+    padding: 30px;
+    margin: 10px 0;
+    color: white;
+}
+
+.gradiente-lineal-4 {
+    background: linear-gradient(to right, #FF6B6B, #4ECDC4, #45B7D1, #FFA07A);
+    padding: 30px;
+    margin: 10px 0;
+    color: white;
+}
+
+/* Gradientes radiales */
+.gradiente-radial-1 {
+    background: radial-gradient(circle, #FF6B6B, #4ECDC4);
+    padding: 50px;
+    margin: 10px 0;
+    color: white;
+}
+
+.gradiente-radial-2 {
+    background: radial-gradient(ellipse, #45B7D1, #96CEB4);
+    padding: 50px;
+    margin: 10px 0;
+    color: white;
+}
+
+.gradiente-radial-3 {
+    background: radial-gradient(circle at top left, #FFA07A, #98D8C8);
+    padding: 50px;
+    margin: 10px 0;
+    color: white;
+}
+
+/* Sombras de caja */
+.sombra-simple {
+    background-color: white;
+    padding: 30px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    /* offset-x offset-y blur-radius color */
+}
+
+.sombra-multiple {
+    background-color: white;
+    padding: 30px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1),
+                0 4px 8px rgba(0,0,0,0.1),
+                0 8px 16px rgba(0,0,0,0.1);
+}
+
+.sombra-inset {
+    background-color: #f0f0f0;
+    padding: 30px;
+    margin: 10px 0;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.sombra-difuminada {
+    background-color: white;
+    padding: 30px;
+    margin: 10px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Sombras de texto */
+.texto-sombra-simple {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin: 20px 0;
+}
+
+.texto-sombra-multiple {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5),
+                 2px 2px 4px rgba(0,0,0,0.3),
+                 3px 3px 6px rgba(0,0,0,0.2);
+    margin: 20px 0;
+}
+
+.texto-sombra-color {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.5);
+    margin: 20px 0;
+}
+/* 12-ejercicio-practico */
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+/* Main content */
+main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.articulo {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.articulo h2 {
+    color: #667eea;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 10px;
+}
+
+.fecha {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.articulo ul {
+    margin: 20px 0;
+    padding-left: 30px;
+}
+
+.articulo li {
+    margin: 10px 0;
+}
+
+.destacado {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Sidebar */
+aside {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+}
+
+.widget {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.widget h4 {
+    color: #667eea;
+    margin-bottom: 15px;
+}
+
+.widget ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.widget li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.widget li:last-child {
+    border-bottom: none;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Css Basico</h1>
+    <p>Contenido consolidado de todos los temas de esta sección.</p>
+    <hr>
+    <!-- 01-introduccion-css -->
+    <div class="seccion">
+        <h1>Introducción a CSS</h1>
+    
+    <h2>¿Qué es CSS?</h2>
+    <p>CSS (Cascading Style Sheets) es un lenguaje que describe cómo se deben mostrar los elementos HTML.</p>
+    
+    <h2>Formas de Aplicar CSS</h2>
+    
+    <div class="ejemplo">
+        <h3>1. CSS Interno (en el &lt;head&gt;)</h3>
+        <p>Se escribe dentro de la etiqueta &lt;style&gt; en el HTML.</p>
+    </div>
+    
+    <div class="ejemplo-externo">
+        <h3>2. CSS Externo (archivo .css)</h3>
+        <p>Se enlaza con &lt;link rel="stylesheet" href="style.css"&gt;</p>
+        <p>Este párrafo tiene estilos desde un archivo externo.</p>
+    </div>
+    
+    <p style="background-color: #fff3cd; padding: 10px; border-left: 4px solid #ffc107;">
+        <strong>3. CSS Inline (en el atributo style)</strong><br>
+        Se aplica directamente en el elemento HTML.
+    </p>
+    
+    <h2>Estructura de una Regla CSS</h2>
+    <pre>
+selector {
+    propiedad: valor;
+    otra-propiedad: valor;
+}
+    </pre>
+    
+    <h2>Ventajas del CSS Externo</h2>
+    <ul>
+        <li>Reutilización de estilos</li>
+        <li>Mantenimiento más fácil</li>
+        <li>Mejor organización del código</li>
+        <li>Cache del navegador</li>
+    </ul>
+    </div>
+    <hr>
+    <!-- 02-selectores-basico -->
+    <div class="seccion">
+        <h1>Selectores CSS Básicos</h1>
+    
+    <h2>Selector de Etiqueta</h2>
+    <p>Este párrafo tiene estilo aplicado con selector de etiqueta.</p>
+    
+    <h2>Selector de Clase</h2>
+    <p class="destacado">Este párrafo tiene la clase "destacado".</p>
+    <p class="destacado">Otro párrafo con la misma clase.</p>
+    
+    <h2>Selector de ID</h2>
+    <p id="especial">Este párrafo tiene el ID "especial" (único en la página).</p>
+    
+    <h2>Selector Universal</h2>
+    <div class="contenedor">
+        <p>Elemento dentro del contenedor</p>
+        <span>Otro elemento</span>
+    </div>
+    
+    <h2>Selectores Múltiples</h2>
+    <h3>Subtítulo</h3>
+    <h4>Otro subtítulo</h4>
+    
+    <h2>Selector Descendente</h2>
+    <div class="padre">
+        <p>Párrafo hijo directo</p>
+        <div>
+            <p>Párrafo nieto</p>
+        </div>
+    </div>
+    </div>
+    <hr>
+    <!-- 03-propiedades-texto-fuente -->
+    <div class="seccion">
+        <h1>Propiedades de Texto y Fuente</h1>
+    
+    <h2>Propiedades de Fuente</h2>
+    <p class="fuente-ejemplo">Ejemplo de fuente personalizada</p>
+    <p class="fuente-tamano">Diferentes tamaños de fuente</p>
+    <p class="fuente-peso">Diferentes pesos de fuente (normal, bold, etc.)</p>
+    <p class="fuente-estilo">Estilos de fuente (normal, italic, oblique)</p>
+    
+    <h2>Propiedades de Texto</h2>
+    <p class="texto-izquierda">Texto alineado a la izquierda (por defecto)</p>
+    <p class="texto-centro">Texto centrado</p>
+    <p class="texto-derecha">Texto alineado a la derecha</p>
+    <p class="texto-justificado">Texto justificado. Este párrafo tiene el texto justificado, lo que significa que todas las líneas tienen la misma longitud excepto la última línea. Es útil para crear bloques de texto uniformes.</p>
+    
+    <h2>Decoración de Texto</h2>
+    <p class="texto-subrayado">Texto subrayado</p>
+    <p class="texto-tachado">Texto tachado</p>
+    <p class="texto-sin-decoracion">Texto sin decoración</p>
+    
+    <h2>Transformación de Texto</h2>
+    <p class="texto-mayusculas">texto en mayúsculas</p>
+    <p class="texto-minusculas">TEXTO EN MINÚSCULAS</p>
+    <p class="texto-capitalizado">texto capitalizado</p>
+    
+    <h2>Espaciado</h2>
+    <p class="espaciado-letras">Espaciado entre letras (letter-spacing)</p>
+    <p class="espaciado-palabras">Espaciado entre palabras (word-spacing)</p>
+    <p class="altura-linea">Altura de línea (line-height). Este párrafo tiene una altura de línea mayor para mejorar la legibilidad del texto cuando hay múltiples líneas.</p>
+    
+    <h2>Interlineado</h2>
+    <p class="interlineado-normal">Interlineado normal. Este párrafo tiene el interlineado por defecto.</p>
+    <p class="interlineado-amplio">Interlineado amplio. Este párrafo tiene más espacio entre líneas para mejorar la lectura.</p>
+    </div>
+    <hr>
+    <!-- 04-tipografias-externas -->
+    <div class="seccion">
+        <h1>Tipografías Externas</h1>
+    
+    <h2>Google Fonts</h2>
+    <p class="roboto-light">Texto con fuente Roboto Light (300)</p>
+    <p class="roboto-regular">Texto con fuente Roboto Regular (400)</p>
+    <p class="roboto-bold">Texto con fuente Roboto Bold (700)</p>
+    
+    <h2>Otra Fuente de Google Fonts</h2>
+    <p class="open-sans">Texto con fuente Open Sans</p>
+    <p class="open-sans-semibold">Texto con fuente Open Sans Semibold</p>
+    
+    <h2>Fuentes del Sistema (Fallback)</h2>
+    <p class="sistema">Esta fuente usa las fuentes del sistema como respaldo</p>
+    
+    <h2>Fuentes Personalizadas con @font-face</h2>
+    <p class="custom-font">Texto con fuente personalizada (si está disponible)</p>
+    
+    <h2>Métodos para Cargar Fuentes</h2>
+    <ul>
+        <li><strong>Google Fonts:</strong> Servicio gratuito de Google</li>
+        <li><strong>@font-face:</strong> Cargar fuentes desde tu servidor</li>
+        <li><strong>CDN:</strong> Servicios como Adobe Fonts, Font Awesome</li>
+    </ul>
+    
+    <h2>Consideraciones</h2>
+    <ul>
+        <li>Usa <code>preconnect</code> para mejorar el rendimiento</li>
+        <li>Solo carga los pesos de fuente que necesites</li>
+        <li>Define fuentes de respaldo (fallback)</li>
+        <li>Considera el rendimiento (más fuentes = más tiempo de carga)</li>
+    </ul>
+    </div>
+    <hr>
+    <!-- 05-modelo-caja -->
+    <div class="seccion">
+        <h1>Modelo de Caja (Box Model)</h1>
+    
+    <p>El modelo de caja es fundamental en CSS. Cada elemento HTML es una caja rectangular.</p>
+    
+    <h2>Componentes del Box Model</h2>
+    <div class="caja-ejemplo">
+        <p><strong>Contenido (Content):</strong> El área donde está el contenido real</p>
+        <p><strong>Padding:</strong> Espacio entre el contenido y el borde</p>
+        <p><strong>Border:</strong> Borde alrededor del padding</p>
+        <p><strong>Margin:</strong> Espacio fuera del borde (separación entre elementos)</p>
+    </div>
+    
+    <h2>Visualización del Box Model</h2>
+    <div class="caja-visual">
+        <div class="contenido">Contenido</div>
+    </div>
+    
+    <h2>Dimensiones</h2>
+    <div class="caja-dimensiones">
+        Esta caja tiene width: 300px y height: 100px
+    </div>
+    
+    <h2>Box Model por Defecto</h2>
+    <div class="caja-default">
+        Width: 300px (sin padding ni border)<br>
+        Ancho total = 300px
+    </div>
+    
+    <h2>Box Model con Padding y Border</h2>
+    <div class="caja-con-padding">
+        Width: 300px + padding: 20px + border: 5px<br>
+        Ancho total = 300 + 40 + 10 = 350px
+    </div>
+    
+    <h2>Dos Cajas con Margin</h2>
+    <div class="caja-margin">Caja 1 con margin</div>
+    <div class="caja-margin">Caja 2 con margin</div>
+    </div>
+    <hr>
+    <!-- 06-relleno-margen -->
+    <div class="seccion">
+        <h1>Padding y Margin</h1>
+    
+    <h2>Padding (Relleno Interno)</h2>
+    <div class="padding-ejemplo">
+        Este div tiene padding de 20px en todos los lados
+    </div>
+    
+    <div class="padding-individual">
+        Este div tiene padding diferente en cada lado
+    </div>
+    
+    <div class="padding-corto">
+        Padding usando notación corta (arriba/abajo izquierda/derecha)
+    </div>
+    
+    <h2>Margin (Margen Externo)</h2>
+    <div class="margin-ejemplo">
+        Este div tiene margin de 30px en todos los lados
+    </div>
+    
+    <div class="margin-individual">
+        Este div tiene margin diferente en cada lado
+    </div>
+    
+    <div class="margin-auto">
+        Este div está centrado usando margin: auto
+    </div>
+    
+    <h2>Margin Negativo</h2>
+    <div class="contenedor">
+        <div class="margin-negativo">Caja con margin negativo</div>
+    </div>
+    
+    <h2>Colapso de Márgenes (Margin Collapse)</h2>
+    <div class="margin-collapse-1">Caja 1 (margin-bottom: 20px)</div>
+    <div class="margin-collapse-2">Caja 2 (margin-top: 30px)</div>
+    <p>El espacio entre las cajas es 30px (el mayor), no 50px</p>
+    
+    <h2>Padding vs Margin</h2>
+    <div class="contenedor-comparacion">
+        <div class="con-padding">Con padding (fondo visible)</div>
+        <div class="con-margin">Con margin (espacio invisible)</div>
+    </div>
+    </div>
+    <hr>
+    <!-- 07-bordes -->
+    <div class="seccion">
+        <h1>Bordes en CSS</h1>
+    
+    <h2>Bordes Básicos</h2>
+    <div class="borde-solido">Borde sólido</div>
+    <div class="borde-punteado">Borde punteado</div>
+    <div class="borde-lineas">Borde con líneas</div>
+    <div class="borde-doble">Borde doble</div>
+    
+    <h2>Grosor de Borde</h2>
+    <div class="borde-delgado">Borde delgado (1px)</div>
+    <div class="borde-medio">Borde medio (3px)</div>
+    <div class="borde-grueso">Borde grueso (10px)</div>
+    
+    <h2>Bordes por Lado</h2>
+    <div class="borde-superior">Borde solo arriba</div>
+    <div class="borde-inferior">Borde solo abajo</div>
+    <div class="borde-izquierdo">Borde solo izquierda</div>
+    <div class="borde-derecho">Borde solo derecha</div>
+    
+    <h2>Bordes Redondeados</h2>
+    <div class="borde-redondeado">Bordes redondeados</div>
+    <div class="borde-circular">Borde circular</div>
+    <div class="borde-elipse">Borde elíptico</div>
+    
+    <h2>Bordes con Colores</h2>
+    <div class="borde-color-solido">Borde de color sólido</div>
+    <div class="borde-color-gradiente">Borde con gradiente (usando outline)</div>
+    
+    <h2>Bordes Múltiples</h2>
+    <div class="borde-multiple">Borde con múltiples estilos</div>
+    </div>
+    <hr>
+    <!-- 08-tamaño-caja -->
+    <div class="seccion">
+        <h1>Box Sizing</h1>
+    
+    <p>La propiedad <code>box-sizing</code> controla cómo se calcula el ancho y alto total de un elemento.</p>
+    
+    <h2>Box Sizing: Content-Box (Por Defecto)</h2>
+    <div class="content-box">
+        width: 300px<br>
+        padding: 20px<br>
+        border: 5px<br>
+        <strong>Ancho total = 300 + 40 + 10 = 350px</strong>
+    </div>
+    
+    <h2>Box Sizing: Border-Box (Recomendado)</h2>
+    <div class="border-box">
+        width: 300px<br>
+        padding: 20px<br>
+        border: 5px<br>
+        <strong>Ancho total = 300px (incluye padding y border)</strong>
+    </div>
+    
+    <h2>Comparación Visual</h2>
+    <div class="comparacion">
+        <div class="content-box-ejemplo">
+            <p>Content-Box</p>
+            <p>Ancho real: 350px</p>
+        </div>
+        <div class="border-box-ejemplo">
+            <p>Border-Box</p>
+            <p>Ancho real: 300px</p>
+        </div>
+    </div>
+    
+    <h2>Mejor Práctica</h2>
+    <div class="mejor-practica">
+        <p>Usa <code>* { box-sizing: border-box; }</code> al inicio de tu CSS</p>
+        <p>Esto hace que todos los elementos incluyan padding y border en su ancho/alto</p>
+    </div>
+    </div>
+    <hr>
+    <!-- 09-colores -->
+    <div class="seccion">
+        <h1>Colores en CSS</h1>
+    
+    <h2>Colores por Nombre</h2>
+    <div class="color-nombre">Color por nombre: red, blue, green, etc.</div>
+    
+    <h2>Colores Hexadecimales</h2>
+    <div class="color-hex">Color hexadecimal: #FF5733</div>
+    <div class="color-hex-corto">Color hex corto: #F53</div>
+    
+    <h2>Colores RGB</h2>
+    <div class="color-rgb">Color RGB: rgb(255, 87, 51)</div>
+    <div class="color-rgba">Color RGBA con transparencia: rgba(255, 87, 51, 0.5)</div>
+    
+    <h2>Colores HSL</h2>
+    <div class="color-hsl">Color HSL: hsl(9, 100%, 60%)</div>
+    <div class="color-hsla">Color HSLA con transparencia: hsla(9, 100%, 60%, 0.7)</div>
+    
+    <h2>Transparencia</h2>
+    <div class="transparencia-opacity">Usando opacity (afecta todo el elemento)</div>
+    <div class="transparencia-rgba">Usando rgba (solo afecta el fondo)</div>
+    
+    <h2>Paleta de Colores</h2>
+    <div class="paleta">
+        <div class="color-1">Color 1</div>
+        <div class="color-2">Color 2</div>
+        <div class="color-3">Color 3</div>
+        <div class="color-4">Color 4</div>
+        <div class="color-5">Color 5</div>
+    </div>
+    
+    <h2>Colores del Sistema</h2>
+    <div class="color-sistema">currentColor - Hereda el color del texto</div>
+    </div>
+    <hr>
+    <!-- 10-unidades -->
+    <div class="seccion">
+        <h1>Unidades en CSS</h1>
+    
+    <h2>Unidades Absolutas</h2>
+    <div class="unidad-px">Tamaño en píxeles (px) - 20px</div>
+    <div class="unidad-pt">Tamaño en puntos (pt) - 16pt</div>
+    <div class="unidad-cm">Tamaño en centímetros (cm) - 2cm</div>
+    
+    <h2>Unidades Relativas al Elemento</h2>
+    <div class="contenedor-em">
+        <p class="unidad-em">Tamaño en em (1.5em) - relativo al tamaño de fuente del padre</p>
+    </div>
+    
+    <div class="contenedor-rem">
+        <p class="unidad-rem">Tamaño en rem (1.5rem) - relativo al tamaño de fuente raíz (html)</p>
+    </div>
+    
+    <h2>Unidades Relativas al Viewport</h2>
+    <div class="unidad-vw">Ancho en vw (50vw = 50% del ancho del viewport)</div>
+    <div class="unidad-vh">Alto en vh (20vh = 20% del alto del viewport)</div>
+    <div class="unidad-vmin">vmin (el menor entre vw y vh)</div>
+    <div class="unidad-vmax">vmax (el mayor entre vw y vh)</div>
+    
+    <h2>Unidades Porcentuales</h2>
+    <div class="contenedor-porcentaje">
+        <div class="unidad-porcentaje">50% del ancho del contenedor</div>
+    </div>
+    
+    <h2>Comparación em vs rem</h2>
+    <div class="ejemplo-em">
+        <p>Texto padre (1.2em)</p>
+        <div class="hijo-em">
+            <p>Texto hijo (1.2em del padre = 1.44em total)</p>
+        </div>
+    </div>
+    
+    <div class="ejemplo-rem">
+        <p>Texto padre (1.2rem)</p>
+        <div class="hijo-rem">
+            <p>Texto hijo (1.2rem = siempre relativo a html)</p>
+        </div>
+    </div>
+    </div>
+    <hr>
+    <!-- 11-fondos-gradientes-sombras -->
+    <div class="seccion">
+        <h1>Fondos, Gradientes y Sombras</h1>
+    
+    <h2>Fondos Básicos</h2>
+    <div class="fondo-color">Fondo con color sólido</div>
+    <div class="fondo-imagen">Fondo con imagen</div>
+    <div class="fondo-repeat">Fondo con repetición</div>
+    <div class="fondo-no-repeat">Fondo sin repetición</div>
+    <div class="fondo-cover">Fondo cover (cubre todo)</div>
+    <div class="fondo-contain">Fondo contain (ajusta contenido)</div>
+    
+    <h2>Gradientes Lineales</h2>
+    <div class="gradiente-lineal-1">Gradiente de izquierda a derecha</div>
+    <div class="gradiente-lineal-2">Gradiente de arriba a abajo</div>
+    <div class="gradiente-lineal-3">Gradiente diagonal</div>
+    <div class="gradiente-lineal-4">Gradiente con múltiples colores</div>
+    
+    <h2>Gradientes Radiales</h2>
+    <div class="gradiente-radial-1">Gradiente radial básico</div>
+    <div class="gradiente-radial-2">Gradiente radial elíptico</div>
+    <div class="gradiente-radial-3">Gradiente radial en posición específica</div>
+    
+    <h2>Sombras de Caja (Box Shadow)</h2>
+    <div class="sombra-simple">Sombra simple</div>
+    <div class="sombra-multiple">Sombra múltiple</div>
+    <div class="sombra-inset">Sombra interna (inset)</div>
+    <div class="sombra-difuminada">Sombra difuminada</div>
+    
+    <h2>Sombras de Texto (Text Shadow)</h2>
+    <div class="texto-sombra-simple">Texto con sombra simple</div>
+    <div class="texto-sombra-multiple">Texto con sombra múltiple</div>
+    <div class="texto-sombra-color">Texto con sombra de color</div>
+    </div>
+    <hr>
+    <!-- 12-ejercicio-practico -->
+    <div class="seccion">
+        <header>
+        <h1>Mi Blog Personal</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#articulos">Artículos</a></li>
+                <li><a href="#sobre">Sobre Mí</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <article class="articulo">
+            <h2>Bienvenido a mi Blog</h2>
+            <p class="fecha">Publicado el 15 de Enero, 2024</p>
+            <p>Este es un ejercicio práctico que combina todos los conceptos de CSS básico que hemos aprendido.</p>
+            
+            <h3>Características del Blog</h3>
+            <ul>
+                <li>Diseño limpio y moderno</li>
+                <li>Colores atractivos</li>
+                <li>Tipografía legible</li>
+                <li>Espaciado adecuado</li>
+            </ul>
+            
+            <div class="destacado">
+                <p>💡 Tip: Este blog utiliza padding, margin, colores, bordes, sombras y más conceptos de CSS básico.</p>
+            </div>
+        </article>
+        
+        <article class="articulo">
+            <h2>Segundo Artículo</h2>
+            <p class="fecha">Publicado el 10 de Enero, 2024</p>
+            <p>Este es otro artículo de ejemplo para demostrar el diseño del blog.</p>
+        </article>
+    </main>
+    
+    <aside>
+        <h3>Sidebar</h3>
+        <div class="widget">
+            <h4>Categorías</h4>
+            <ul>
+                <li>CSS</li>
+                <li>HTML</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+    </aside>
+    
+    <footer>
+        <p>&copy; 2024 Mi Blog Personal. Todos los derechos reservados.</p>
+    </footer>
+    </div>
+    <hr>
+
+</body>
+</html>

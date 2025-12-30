@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción - Desarrollo Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #555;
+            margin-top: 30px;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+        h3 {
+            color: #666;
+            margin-top: 20px;
+        }
+        .ejemplo {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-left: 4px solid #007bff;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            border-left: 4px solid #28a745;
+        }
+        .resumen {
+            background-color: #e3f2fd;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .estructura-visual {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            margin: 15px 0;
+        }
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        li {
+            margin: 8px 0;
+        }
+        hr {
+            border: none;
+            border-top: 2px solid #ddd;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido al Curso de Desarrollo Web</h1>
+    <p>Este repositorio contiene ejemplos prácticos de HTML y CSS organizados por temas.</p>
+    <p>Cada carpeta contiene ejemplos funcionales que puedes abrir directamente en tu navegador.</p>
+
+    <hr>
+
+    <h1>¿Qué es la Web y Cómo Funciona Realmente?</h1>
+    
+    <p>La <strong>web</strong> (World Wide Web) es un sistema para <strong>compartir información entre computadoras</strong> usando Internet.</p>
+    
+    <div class="ejemplo">
+        <p><strong>👉 Una computadora pide información y otra se la envía</strong></p>
+    </div>
+
+    <h2>Ejemplo Real:</h2>
+    <ul>
+        <li>Tú escribes: <code>www.ejemplo.com</code></li>
+        <li>Tu navegador <strong>pide</strong> esa página</li>
+        <li>Un <strong>servidor</strong> responde enviando archivos</li>
+        <li>Tu navegador <strong>interpreta esos archivos</strong> y los muestra como una página web</li>
+    </ul>
+
+    <p>Esto se llama el modelo <strong>cliente–servidor</strong>:</p>
+    <ul>
+        <li><strong>Cliente:</strong> tu navegador (Chrome, Firefox, etc.)</li>
+        <li><strong>Servidor:</strong> la computadora donde está el sitio web</li>
+    </ul>
+
+    <hr>
+
+    <h2>¿Cómo Surgió la Web?</h2>
+
+    <h3>Antes de la Web</h3>
+    <ul>
+        <li>Internet ya existía (años 60–80)</li>
+        <li>Solo se usaba para:
+            <ul>
+                <li>correos</li>
+                <li>archivos</li>
+                <li>texto técnico</li>
+            </ul>
+        </li>
+        <li>Era muy difícil de usar</li>
+    </ul>
+
+    <h3>El Problema</h3>
+    <p>Los científicos no podían <strong>compartir información fácilmente</strong> entre universidades.</p>
+
+    <h3>La Solución (1989)</h3>
+    <p>Un científico llamado <strong>Tim Berners-Lee</strong> creó:</p>
+    <ol>
+        <li><strong>HTML</strong> → para escribir documentos</li>
+        <li><strong>HTTP</strong> → para enviarlos</li>
+        <li><strong>URL</strong> → para localizarlos</li>
+    </ol>
+    <p>📌 Así nació la <strong>World Wide Web</strong>.</p>
+
+    <div class="ejemplo">
+        <p><strong>Nota importante:</strong> La web no es Internet. La web es <strong>un servicio que funciona sobre Internet</strong>.</p>
+    </div>
+
+    <hr>
+
+    <h2>¿Qué Pasa Cuando Entras a una Página Web?</h2>
+    <p>Paso a paso, sin magia:</p>
+    <ol>
+        <li>Escribes una URL
+            <pre><code>https://ejemplo.com</code></pre>
+        </li>
+        <li>El navegador pregunta: <em>"¿Dónde está este servidor?"</em></li>
+        <li>Se conecta al servidor</li>
+        <li>El navegador dice: <em>"Dame la página principal"</em></li>
+        <li>El servidor responde enviando archivos:
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>imágenes</li>
+                <li>JavaScript (a veces)</li>
+            </ul>
+        </li>
+        <li>El navegador <strong>lee</strong> esos archivos y <strong>construye la página</strong></li>
+    </ol>
+
+    <hr>
+
+    <h2>Conceptos Básicos de la Web</h2>
+    <ul>
+        <li><strong>WWW (World Wide Web):</strong> Sistema de información basado en hipertexto</li>
+        <li><strong>HTTP/HTTPS:</strong> Protocolo de transferencia de hipertexto</li>
+        <li><strong>URL:</strong> Localizador Uniforme de Recursos</li>
+        <li><strong>Navegador:</strong> Cliente que interpreta y muestra páginas web</li>
+        <li><strong>Servidor:</strong> Computadora que almacena y sirve páginas web</li>
+    </ul>
+
+    <h2>Flujo de una Petición Web</h2>
+    <ol>
+        <li>Usuario escribe una URL en el navegador</li>
+        <li>Navegador envía petición HTTP al servidor</li>
+        <li>Servidor procesa la petición y devuelve HTML/CSS/JS</li>
+        <li>Navegador renderiza la página</li>
+    </ol>
+
+    <hr>
+
+    <h1>¿Qué es HTML y Qué Hace?</h1>
+
+    <h2>HTML = Estructura</h2>
+    <p>HTML le dice al navegador:</p>
+    <ul>
+        <li>qué es un título</li>
+        <li>qué es un párrafo</li>
+        <li>qué es una imagen</li>
+        <li>qué es un botón</li>
+    </ul>
+    <p>No da estilo, <strong>solo significado</strong>.</p>
+
+    <h3>Ejemplo Simple:</h3>
+    <pre><code>&lt;h1&gt;Hola mundo&lt;/h1&gt;
+&lt;p&gt;Este es un texto&lt;/p&gt;</code></pre>
+
+    <p>El navegador entiende:</p>
+    <ul>
+        <li><code>&lt;h1&gt;</code> → esto es un título importante</li>
+        <li><code>&lt;p&gt;</code> → esto es un párrafo</li>
+    </ul>
+
+    <p>📌 HTML es como el <strong>esqueleto</strong> de un cuerpo.</p>
+
+    <hr>
+
+    <h1>¿Qué es CSS y Qué Hace?</h1>
+
+    <h2>CSS = Apariencia</h2>
+    <p>CSS controla:</p>
+    <ul>
+        <li>colores</li>
+        <li>tamaños</li>
+        <li>posiciones</li>
+        <li>diseño (mobile, PC, etc.)</li>
+    </ul>
+
+    <h3>Ejemplo:</h3>
+    <pre><code>h1 {
+  color: red;
+  font-size: 40px;
+}</code></pre>
+
+    <p>Esto le dice al navegador:</p>
+    <ul>
+        <li>todos los <code>h1</code> → rojos y grandes</li>
+    </ul>
+
+    <p>📌 CSS es como la <strong>ropa y la apariencia</strong> del cuerpo.</p>
+
+    <hr>
+
+    <h1>HTML y CSS: La Base del Desarrollo Web</h1>
+    
+    <div class="ejemplo">
+        <h2>HTML (HyperText Markup Language)</h2>
+        <p><strong>Función:</strong> Define la estructura y el contenido de una página web.</p>
+        <p><strong>Ejemplo:</strong> Este párrafo está escrito en HTML usando la etiqueta &lt;p&gt;</p>
+    </div>
+    
+    <div class="ejemplo">
+        <h2>CSS (Cascading Style Sheets)</h2>
+        <p><strong>Función:</strong> Define el estilo visual (colores, fuentes, diseño).</p>
+        <p><strong>Ejemplo:</strong> Este cuadro tiene estilo aplicado con CSS (fondo gris, borde azul).</p>
+    </div>
+    
+    <h2>Relación HTML + CSS</h2>
+    <ul>
+        <li><strong>HTML</strong> = Esqueleto (estructura)</li>
+        <li><strong>CSS</strong> = Piel (apariencia)</li>
+        <li>Juntos crean páginas web completas y atractivas</li>
+    </ul>
+
+    <hr>
+
+    <h2>¿Cómo Trabajan Juntos HTML y CSS?</h2>
+    <p>HTML define <strong>qué hay</strong><br>
+    CSS define <strong>cómo se ve</strong></p>
+
+    <h3>Ejemplo Completo:</h3>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      p {
+        color: blue;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Hola web&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <p><strong>Proceso:</strong></p>
+    <ol>
+        <li>El navegador lee HTML</li>
+        <li>Ve que hay CSS</li>
+        <li>Aplica los estilos</li>
+        <li>Muestra la página final</li>
+    </ol>
+
+    <hr>
+
+    <h2>¿Por Qué el Navegador "Entiende" HTML y CSS?</h2>
+    <p>Porque los navegadores:</p>
+    <ul>
+        <li>están programados para <strong>interpretar estándares</strong></li>
+        <li>HTML y CSS son <strong>lenguajes universales</strong></li>
+    </ul>
+
+    <p>Eso permite que una misma página funcione en:</p>
+    <ul>
+        <li>Windows</li>
+        <li>Linux</li>
+        <li>celular</li>
+        <li>tablet</li>
+    </ul>
+
+    <hr>
+
+    <h2>¿Qué NO Hacen HTML y CSS?</h2>
+    <ul>
+        <li>❌ No hacen lógica</li>
+        <li>❌ No toman decisiones</li>
+        <li>❌ No guardan datos</li>
+    </ul>
+
+    <p>Para eso existe:</p>
+    <ul>
+        <li><strong>JavaScript</strong> (comportamiento)</li>
+        <li><strong>Back-end</strong> (servidores, bases de datos)</li>
+    </ul>
+
+    <hr>
+
+    <h1>Estructura de una Página Web</h1>
+
+    <p>Estructuras de archivos de una página web:</p>
+    <ul>
+        <li><strong>HTML:</strong> Esqueleto de la página web.</li>
+        <li><strong>CSS:</strong> Estilo de la página web.</li>
+        <li><strong>JS:</strong> Funcionalidades y eventos de la página web.</li>
+    </ul>
+
+    <h2>Estructura General (HTML)</h2>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Mi página web&lt;/title&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;header&gt;
+    &lt;h1&gt;Nombre del sitio&lt;/h1&gt;
+    &lt;nav&gt;
+      &lt;a href="#"&gt;Inicio&lt;/a&gt;
+      &lt;a href="#"&gt;Sobre mí&lt;/a&gt;
+      &lt;a href="#"&gt;Contacto&lt;/a&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;section&gt;
+      &lt;h2&gt;Título principal&lt;/h2&gt;
+      &lt;p&gt;Contenido principal de la página.&lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;section&gt;
+      &lt;h2&gt;Otra sección&lt;/h2&gt;
+      &lt;p&gt;Más información aquí.&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;© 2025 Mi página web&lt;/p&gt;
+  &lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <hr>
+
+    <h2>Partes Principales Explicadas</h2>
+
+    <h3>🔹 &lt;header&gt;</h3>
+    <ul>
+        <li>Encabezado del sitio</li>
+        <li>Logo, título y menú de navegación</li>
+    </ul>
+
+    <h3>🔹 &lt;nav&gt;</h3>
+    <ul>
+        <li>Menú con enlaces</li>
+        <li>Ayuda a la navegación y al SEO</li>
+    </ul>
+
+    <h3>🔹 &lt;main&gt;</h3>
+    <ul>
+        <li>Contenido principal</li>
+        <li>Solo debe haber <strong>uno</strong> por página</li>
+    </ul>
+
+    <h3>🔹 &lt;section&gt;</h3>
+    <ul>
+        <li>Divide el contenido por temas</li>
+        <li>Puede haber muchas</li>
+    </ul>
+
+    <h3>🔹 &lt;footer&gt;</h3>
+    <ul>
+        <li>Información final</li>
+        <li>Derechos de autor, redes sociales, enlaces legales</li>
+    </ul>
+
+    <hr>
+
+    <h2>Estructura Visual Típica</h2>
+    <div class="estructura-visual">
+<pre>-------------------------
+|        HEADER         |
+|  Logo | Menú          |
+-------------------------
+|        MAIN           |
+|  Sección 1            |
+|  Sección 2            |
+-------------------------
+|        FOOTER         |
+-------------------------</pre>
+    </div>
+
+    <hr>
+
+    <h2>CSS Mínimo (Opcional)</h2>
+    <pre><code>body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+header, footer {
+  background: #222;
+  color: white;
+  padding: 1rem;
+}
+
+nav a {
+  color: white;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+main {
+  padding: 1rem;
+}</code></pre>
+
+    <hr>
+
+    <h1>Editores de Código Recomendados</h1>
+    
+    <h2>Editores Populares</h2>
+    <ul>
+        <li><strong>Visual Studio Code:</strong> Gratuito, extensible, muy popular</li>
+        <li><strong>Sublime Text:</strong> Rápido y ligero</li>
+        <li><strong>Atom:</strong> Open source, personalizable</li>
+        <li><strong>WebStorm:</strong> IDE completo para desarrollo web</li>
+    </ul>
+    
+    <h2>Extensiones Útiles para VS Code</h2>
+    <ul>
+        <li>Live Server - Para previsualizar páginas</li>
+        <li>Prettier - Formateador de código</li>
+        <li>Emmet - Atajos para escribir HTML/CSS</li>
+        <li>Color Highlight - Resalta colores en CSS</li>
+    </ul>
+    
+    <h2>Consejos</h2>
+    <ul>
+        <li>Usa atajos de teclado para ser más productivo</li>
+        <li>Configura el auto-guardado</li>
+        <li>Personaliza tu editor según tus necesidades</li>
+        <li>Utilizar emmet para escribir código más rápido</li>
+    </ul>
+
+    <hr>
+
+    <div class="resumen">
+        <h2>Resumen Mental Rápido</h2>
+        <ul>
+            <li><strong>Internet</strong> → red de computadoras</li>
+            <li><strong>Web</strong> → sistema para compartir páginas</li>
+            <li><strong>HTML</strong> → estructura</li>
+            <li><strong>CSS</strong> → diseño</li>
+            <li><strong>Navegador</strong> → intérprete</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <p><em>Autor: Fravelz</em></p>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos Finales - Desarrollo Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h2 {
+            color: #555;
+            margin-top: 30px;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+        .seccion {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        hr {
+            border: none;
+            border-top: 2px solid #ddd;
+            margin: 40px 0;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        /* 01-sidebar-menu */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    position: fixed;
+    left: -300px;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #333;
+    color: white;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 60px 20px 20px;
+}
+
+.sidebar nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    border-bottom: 1px solid #555;
+}
+
+.sidebar nav a:hover {
+    background-color: #555;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.menu-btn {
+    padding: 10px 20px;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.menu-btn:hover {
+    background-color: #5568d3;
+}
+/* 03-flip-card */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    padding: 40px;
+}
+
+h1 {
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.flip-card {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.flip-card-front {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.flip-card-back {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flip-card-front h2,
+.flip-card-back h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+/* 05-menu-acordeon */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 40px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.acordeon {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.item {
+    background-color: white;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.titulo {
+    padding: 15px 20px;
+    background-color: #667eea;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.titulo:hover {
+    background-color: #5568d3;
+}
+
+.contenido {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 20px;
+}
+
+.item.activo .contenido {
+    max-height: 200px;
+    padding: 20px;
+}
+
+.item.activo .titulo {
+    background-color: #5568d3;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Proyectos Finales</h1>
+    <p>Contenido consolidado de todos los temas de esta sección.</p>
+    <hr>
+    <!-- 01-sidebar-menu -->
+    <div class="seccion">
+        <div class="sidebar" id="sidebar">
+        <button class="close-btn" id="closeBtn">&times;</button>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="main-content">
+        <button class="menu-btn" id="menuBtn">☰ Menú</button>
+        <h1>Sidebar Menu</h1>
+        <p>Proyecto de menú lateral deslizable.</p>
+    </div>
+    
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const closeBtn = document.getElementById('closeBtn');
+        const sidebar = document.getElementById('sidebar');
+        
+        menuBtn.addEventListener('click', () => {
+            sidebar.classList.add('active');
+        });
+        
+        closeBtn.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+        });
+    </script>
+    </div>
+    <hr>
+    <!-- 03-flip-card -->
+    <div class="seccion">
+        <h1>Flip Card</h1>
+    
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h2>Front</h2>
+                <p>Pasa el mouse para voltear</p>
+            </div>
+            <div class="flip-card-back">
+                <h2>Back</h2>
+                <p>Contenido del reverso</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <hr>
+    <!-- 05-menu-acordeon -->
+    <div class="seccion">
+        <h1>Menú Acordeón</h1>
+    
+    <div class="acordeon">
+        <div class="item">
+            <div class="titulo">Sección 1</div>
+            <div class="contenido">
+                <p>Contenido de la sección 1. Este es un ejemplo de menú acordeón.</p>
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="titulo">Sección 2</div>
+            <div class="contenido">
+                <p>Contenido de la sección 2. Haz clic para expandir o contraer.</p>
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="titulo">Sección 3</div>
+            <div class="contenido">
+                <p>Contenido de la sección 3. Solo una sección puede estar abierta a la vez.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const items = document.querySelectorAll('.item');
+        
+        items.forEach(item => {
+            const titulo = item.querySelector('.titulo');
+            titulo.addEventListener('click', () => {
+                const estaAbierto = item.classList.contains('activo');
+                
+                items.forEach(i => i.classList.remove('activo'));
+                
+                if (!estaAbierto) {
+                    item.classList.add('activo');
+                }
+            });
+        });
+    </script>
+    </div>
+    <hr>
+
+</body>
+</html>

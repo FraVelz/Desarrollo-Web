@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design - Desarrollo Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h2 {
+            color: #555;
+            margin-top: 30px;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+        .seccion {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        hr {
+            border: none;
+            border-top: 2px solid #ddd;
+            margin: 40px 0;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        /* 04-media-queries */
+/* Estilos base (móvil first) */
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.caja {
+    background-color: #2196f3;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.texto-responsive {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.texto-responsive h2 {
+    font-size: 1.5rem;
+}
+
+.texto-responsive p {
+    font-size: 1rem;
+}
+
+.menu-responsive nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+}
+
+.menu-responsive nav a {
+    display: block;
+    padding: 15px;
+    background-color: #667eea;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.grid-responsive {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.grid-responsive .item {
+    background-color: #4caf50;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Tablet (768px y más) */
+@media (min-width: 768px) {
+    .contenedor {
+        flex-direction: row;
+    }
+    
+    .texto-responsive h2 {
+        font-size: 2rem;
+    }
+    
+    .texto-responsive p {
+        font-size: 1.2rem;
+    }
+    
+    .menu-responsive nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .grid-responsive {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop (1024px y más) */
+@media (min-width: 1024px) {
+    .contenedor {
+        max-width: 1200px;
+        margin: 20px auto;
+    }
+    
+    .texto-responsive h2 {
+        font-size: 2.5rem;
+    }
+    
+    .texto-responsive p {
+        font-size: 1.3rem;
+    }
+    
+    .grid-responsive {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Orientación landscape */
+@media (orientation: landscape) {
+    .contenedor {
+        flex-direction: row;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <h1>Responsive Design</h1>
+    <p>Contenido consolidado de todos los temas de esta sección.</p>
+    <hr>
+    <!-- 04-media-queries -->
+    <div class="seccion">
+        <h1>Media Queries - Diseño Responsive</h1>
+    
+    <div class="contenedor">
+        <div class="caja">Caja 1</div>
+        <div class="caja">Caja 2</div>
+        <div class="caja">Caja 3</div>
+    </div>
+    
+    <div class="texto-responsive">
+        <h2>Texto Responsive</h2>
+        <p>Este texto cambia de tamaño según el ancho de la pantalla.</p>
+        <p>En móviles será más pequeño, en desktop más grande.</p>
+    </div>
+    
+    <div class="menu-responsive">
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="grid-responsive">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </div>
+    </div>
+    <hr>
+
+</body>
+</html>

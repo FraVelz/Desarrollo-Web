@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Flexbox - Desarrollo Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h2 {
+            color: #555;
+            margin-top: 30px;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+        .seccion {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        hr {
+            border: none;
+            border-top: 2px solid #ddd;
+            margin: 40px 0;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        /* 01-introduccion-flexbox */
+/* Contenedor flex básico */
+.contenedor-flex {
+    display: flex;
+    background-color: #e3f2fd;
+    padding: 20px;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.item {
+    background-color: #2196f3;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    flex: 1;
+    text-align: center;
+}
+
+/* Flexbox en columna */
+.contenedor-flex-columna {
+    display: flex;
+    flex-direction: column;
+    background-color: #f3e5f5;
+    padding: 20px;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+/* Justify Content */
+.contenedor-justify-start {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #fff3cd;
+    padding: 20px;
+    margin: 10px 0;
+    gap: 10px;
+}
+
+.contenedor-justify-center {
+    display: flex;
+    justify-content: center;
+    background-color: #d1ecf1;
+    padding: 20px;
+    margin: 10px 0;
+    gap: 10px;
+}
+
+.contenedor-justify-end {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #f8d7da;
+    padding: 20px;
+    margin: 10px 0;
+    gap: 10px;
+}
+
+.contenedor-justify-between {
+    display: flex;
+    justify-content: space-between;
+    background-color: #d4edda;
+    padding: 20px;
+    margin: 10px 0;
+    gap: 10px;
+}
+
+/* Align Items */
+.contenedor-align {
+    display: flex;
+    align-items: center;
+    background-color: #e7f3ff;
+    padding: 20px;
+    margin: 20px 0;
+    height: 200px;
+    gap: 10px;
+}
+
+.item-alto {
+    background-color: #007bff;
+    color: white;
+    padding: 40px 20px;
+    border-radius: 5px;
+}
+
+.item-medio {
+    background-color: #28a745;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.item-bajo {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Css Flexbox</h1>
+    <p>Contenido consolidado de todos los temas de esta sección.</p>
+    <hr>
+    <!-- 01-introduccion-flexbox -->
+    <div class="seccion">
+        <h1>Introducción a Flexbox</h1>
+    
+    <p>Flexbox es un sistema de diseño unidimensional que permite distribuir elementos en filas o columnas.</p>
+    
+    <h2>Contenedor Flex Básico</h2>
+    <div class="contenedor-flex">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+    
+    <h2>Flexbox en Columna</h2>
+    <div class="contenedor-flex-columna">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+    
+    <h2>Justify Content (Eje Principal)</h2>
+    <div class="contenedor-justify-start">
+        <div class="item">Start</div>
+        <div class="item">Start</div>
+    </div>
+    
+    <div class="contenedor-justify-center">
+        <div class="item">Center</div>
+        <div class="item">Center</div>
+    </div>
+    
+    <div class="contenedor-justify-end">
+        <div class="item">End</div>
+        <div class="item">End</div>
+    </div>
+    
+    <div class="contenedor-justify-between">
+        <div class="item">Between</div>
+        <div class="item">Between</div>
+    </div>
+    
+    <h2>Align Items (Eje Secundario)</h2>
+    <div class="contenedor-align">
+        <div class="item-alto">Item Alto</div>
+        <div class="item-medio">Item Medio</div>
+        <div class="item-bajo">Item Bajo</div>
+    </div>
+    </div>
+    <hr>
+
+</body>
+</html>
